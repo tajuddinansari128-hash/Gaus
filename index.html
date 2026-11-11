@@ -1,0 +1,2160 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>The Cafeteria - Sips, Bites & Good Vibes | Hazra Road, South Kolkata</title>
+  <meta name="description" content="The Cafeteria - Your favorite adda spot for sips, bites & good vibes in Hazra Road, Bhowanipore, South Kolkata. Burgers, shakes, cold coffee & pocket-friendly bites right next to Jatin Das Park Metro." />
+  <meta property="og:title" content="The Cafeteria - Sips, Bites & Good Vibes | South Kolkata" />
+  <meta property="og:description" content="Your daily adda for cheesy bites, crazy shakes & unmatched vibes on Hazra Road, Bhowanipore. Open Mon-Sat 12-10 PM, Sun 4-10 PM." />
+  <meta property="og:type" content="website" />
+  <meta name="twitter:card" content="summary_large_image" />
+
+  <!-- Google Fonts: Plus Jakarta Sans & Outfit for Neo-Brutalist Pop Aesthetic -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;700;800;900&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Bungee&display=swap" rel="stylesheet">
+
+  <!-- Tailwind CSS via CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+            display: ['"Outfit"', 'sans-serif'],
+            retro: ['"Bungee"', 'cursive'],
+          },
+          colors: {
+            'pop-cream': '#FFFDF0',
+            'pop-yellow': '#FACC15',
+            'pop-butter': '#FEF08A',
+            'pop-orange': '#FF5E36',
+            'pop-pink': '#FF3B88',
+            'pop-cyan': '#06B6D4',
+            'pop-lime': '#84CC16',
+            'pop-lavender': '#EDE9FE',
+            'pop-black': '#111827',
+          },
+          boxShadow: {
+            'brutal-sm': '2px 2px 0px 0px #111827',
+            'brutal': '4px 4px 0px 0px #111827',
+            'brutal-lg': '6px 6px 0px 0px #111827',
+            'brutal-xl': '8px 8px 0px 0px #111827',
+            'brutal-pink': '4px 4px 0px 0px #FF3B88',
+            'brutal-cyan': '4px 4px 0px 0px #06B6D4',
+            'brutal-yellow': '4px 4px 0px 0px #FACC15',
+          }
+        }
+      }
+    }
+  </script>
+
+  <!-- Lucide Icons via CDN -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+
+  <style>
+    /* Custom marquee animation */
+    @keyframes marquee {
+      0% { transform: translateX(0%); }
+      100% { transform: translateX(-50%); }
+    }
+    .animate-marquee {
+      display: flex;
+      width: 200%;
+      animation: marquee 22s linear infinite;
+    }
+    .animate-marquee:hover {
+      animation-play-state: paused;
+    }
+
+    /* Chunky Neo-Brutalist tactile press effect */
+    .btn-brutal {
+      transition: all 0.15s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+    .btn-brutal:hover {
+      transform: translate(-2px, -2px);
+      box-shadow: 6px 6px 0px 0px #111827;
+    }
+    .btn-brutal:active {
+      transform: translate(2px, 2px);
+      box-shadow: 1px 1px 0px 0px #111827;
+    }
+
+    /* Quirky floating sticker bounce */
+    @keyframes subtle-float {
+      0%, 100% { transform: translateY(0px) rotate(var(--rot, 0deg)); }
+      50% { transform: translateY(-6px) rotate(var(--rot, 0deg)); }
+    }
+    .float-sticker {
+      animation: subtle-float 3s ease-in-out infinite;
+    }
+
+    /* Custom scrollbar */
+    ::-webkit-scrollbar {
+      width: 10px;
+    }
+    ::-webkit-scrollbar-track {
+      background: #FEF08A;
+      border-left: 2px solid #111827;
+    }
+    ::-webkit-scrollbar-thumb {
+      background: #FF5E36;
+      border: 2px solid #111827;
+      border-radius: 6px;
+    }
+    ::-webkit-scrollbar-thumb:hover {
+      background: #FF3B88;
+    }
+  </style>
+</head>
+<body class="bg-pop-cream text-pop-black font-sans antialiased selection:bg-pop-pink selection:text-white pb-20 md:pb-0">
+
+  <!-- TOP FUNKY MARQUEE TICKER -->
+  <div class="bg-pop-yellow border-b-4 border-pop-black overflow-hidden py-2.5 font-display font-extrabold text-xs sm:text-sm tracking-wide text-pop-black select-none sticky top-0 z-50">
+    <div class="animate-marquee whitespace-nowrap">
+      <span class="inline-flex items-center gap-6 px-4">
+        <span>☕ FRESHLY BREWED COFFEE</span>
+        <span>•</span>
+        <span>🍔 CHEESY BURGERS</span>
+        <span>•</span>
+        <span>🍕 CRISPY THIN PIZZAS</span>
+        <span>•</span>
+        <span>🥤 THICK CRAZY SHAKES</span>
+        <span>•</span>
+        <span>📍 HAZRA ROAD, BHOWANIPORE</span>
+        <span>•</span>
+        <span>⚡ SUNDAY OPENS AT 4 PM!</span>
+        <span>•</span>
+        <span>💬 WHATSAPP ORDERING: +91 62899 74613</span>
+        <span>•</span>
+        <span>⭐ 4.4/5 GOOGLE RATING</span>
+        <span>•</span>
+        <span>🎓 SOUTH KOLKATA'S FAVORITE ADDA</span>
+        <span>•</span>
+        <span>📶 FREE WI-FI & GOOD VIBES</span>
+        <span>•</span>
+      </span>
+      <span class="inline-flex items-center gap-6 px-4" aria-hidden="true">
+        <span>☕ FRESHLY BREWED COFFEE</span>
+        <span>•</span>
+        <span>🍔 CHEESY BURGERS</span>
+        <span>•</span>
+        <span>🍕 CRISPY THIN PIZZAS</span>
+        <span>•</span>
+        <span>🥤 THICK CRAZY SHAKES</span>
+        <span>•</span>
+        <span>📍 HAZRA ROAD, BHOWANIPORE</span>
+        <span>•</span>
+        <span>⚡ SUNDAY OPENS AT 4 PM!</span>
+        <span>•</span>
+        <span>💬 WHATSAPP ORDERING: +91 62899 74613</span>
+        <span>•</span>
+        <span>⭐ 4.4/5 GOOGLE RATING</span>
+        <span>•</span>
+        <span>🎓 SOUTH KOLKATA'S FAVORITE ADDA</span>
+        <span>•</span>
+        <span>📶 FREE WI-FI & GOOD VIBES</span>
+        <span>•</span>
+      </span>
+    </div>
+  </div>
+
+  <!-- MAIN NAVIGATION BAR -->
+  <header class="bg-white border-b-4 border-pop-black px-4 sm:px-8 py-3.5 sticky top-[41px] z-40 transition-shadow">
+    <div class="max-w-7xl mx-auto flex items-center justify-between gap-4">
+      
+      <!-- Brand Logo Lockup -->
+      <a href="#hero" class="flex items-center gap-2 group">
+        <div class="w-11 h-11 bg-pop-orange border-3 border-pop-black rounded-xl shadow-brutal-sm flex items-center justify-center font-retro text-white text-xl group-hover:rotate-6 transition-transform">
+          TC
+        </div>
+        <div class="flex flex-col">
+          <span class="font-display font-black text-xl sm:text-2xl tracking-tight text-pop-black leading-none">
+            THE CAFETERIA
+          </span>
+          <span class="text-[10px] sm:text-xs font-bold text-pop-pink uppercase tracking-widest mt-0.5">
+            Hazra Rd • Bhowanipore
+          </span>
+        </div>
+      </a>
+
+      <!-- Desktop Navigation Links -->
+      <nav class="hidden lg:flex items-center gap-6 text-sm font-bold text-pop-black">
+        <a href="#hero" class="hover:text-pop-orange transition-colors">Home</a>
+        <a href="#menu" class="hover:text-pop-orange transition-colors">Funky Menu</a>
+        <a href="#gallery" class="hover:text-pop-orange transition-colors">Vibe & Gallery</a>
+        <a href="#reviews" class="hover:text-pop-orange transition-colors">Adda Reviews</a>
+        <a href="#timings" class="hover:text-pop-orange transition-colors">Hours & Status</a>
+        <a href="#booking" class="hover:text-pop-orange transition-colors">Book a Table</a>
+        <a href="#location" class="hover:text-pop-orange transition-colors">Find Us</a>
+      </nav>
+
+      <!-- Header Action Zone -->
+      <div class="flex items-center gap-3">
+        <!-- Floating Cart Trigger Button -->
+        <button id="cart-open-btn" onclick="toggleCartDrawer(true)" class="relative p-2.5 bg-pop-yellow border-2 border-pop-black rounded-xl shadow-brutal-sm hover:scale-105 transition-transform" aria-label="Open Cart">
+          <i data-lucide="shopping-bag" class="w-5 h-5 text-pop-black"></i>
+          <span id="cart-badge-count" class="absolute -top-2 -right-2 bg-pop-pink text-white font-extrabold text-[11px] w-5 h-5 rounded-full border-2 border-pop-black flex items-center justify-center shadow-sm">
+            0
+          </span>
+        </button>
+
+        <!-- WhatsApp CTA Button -->
+        <a href="https://wa.me/916289974613?text=Hey%20The%20Cafeteria!%20I%20am%20looking%20to%20place%20an%20order%20or%20check%20table%20availability." target="_blank" rel="noopener noreferrer" class="hidden sm:inline-flex items-center gap-2 px-4 py-2 bg-pop-lime text-pop-black font-display font-extrabold text-sm border-2 border-pop-black rounded-xl shadow-brutal hover:bg-lime-400 btn-brutal">
+          <i data-lucide="message-circle" class="w-4 h-4"></i>
+          <span>Order on WhatsApp</span>
+        </a>
+
+        <!-- Mobile Menu Toggle Button -->
+        <button id="mobile-menu-btn" onclick="toggleMobileNav()" class="lg:hidden p-2 bg-pop-cream border-2 border-pop-black rounded-xl shadow-brutal-sm hover:bg-pop-yellow transition-colors" aria-label="Toggle Navigation">
+          <i id="menu-icon" data-lucide="menu" class="w-6 h-6"></i>
+        </button>
+      </div>
+    </div>
+
+    <!-- Mobile Navigation Drawer -->
+    <div id="mobile-nav" class="hidden lg:hidden border-t-2 border-pop-black mt-3 pt-3 pb-2 space-y-2 font-display font-bold text-base">
+      <a href="#hero" onclick="toggleMobileNav()" class="block px-3 py-2 rounded-lg hover:bg-pop-yellow border-2 border-transparent hover:border-pop-black transition-colors">Home</a>
+      <a href="#menu" onclick="toggleMobileNav()" class="block px-3 py-2 rounded-lg hover:bg-pop-yellow border-2 border-transparent hover:border-pop-black transition-colors">Funky Menu</a>
+      <a href="#gallery" onclick="toggleMobileNav()" class="block px-3 py-2 rounded-lg hover:bg-pop-yellow border-2 border-transparent hover:border-pop-black transition-colors">Vibe & Gallery</a>
+      <a href="#reviews" onclick="toggleMobileNav()" class="block px-3 py-2 rounded-lg hover:bg-pop-yellow border-2 border-transparent hover:border-pop-black transition-colors">Adda Reviews</a>
+      <a href="#timings" onclick="toggleMobileNav()" class="block px-3 py-2 rounded-lg hover:bg-pop-yellow border-2 border-transparent hover:border-pop-black transition-colors">Hours & Timings</a>
+      <a href="#booking" onclick="toggleMobileNav()" class="block px-3 py-2 rounded-lg hover:bg-pop-yellow border-2 border-transparent hover:border-pop-black transition-colors">Book a Table</a>
+      <a href="#location" onclick="toggleMobileNav()" class="block px-3 py-2 rounded-lg hover:bg-pop-yellow border-2 border-transparent hover:border-pop-black transition-colors">Location & Map</a>
+      <div class="pt-2 flex flex-col gap-2">
+        <a href="tel:06289974613" class="flex items-center justify-center gap-2 py-2.5 bg-pop-cyan text-pop-black font-extrabold border-2 border-pop-black rounded-xl shadow-brutal-sm">
+          <i data-lucide="phone-call" class="w-4 h-4"></i>
+          <span>Call: +91 62899 74613</span>
+        </a>
+        <a href="https://wa.me/916289974613?text=Hey%20The%20Cafeteria!%20I%20am%20looking%20to%20order." target="_blank" rel="noopener noreferrer" class="flex items-center justify-center gap-2 py-2.5 bg-pop-lime text-pop-black font-extrabold border-2 border-pop-black rounded-xl shadow-brutal-sm">
+          <i data-lucide="message-circle" class="w-4 h-4"></i>
+          <span>Chat on WhatsApp</span>
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <!-- LIVE OPEN / CLOSED STATUS ALERT BAR -->
+  <section class="bg-pop-lavender border-b-4 border-pop-black px-4 py-2.5">
+    <div class="max-w-7xl mx-auto flex flex-wrap items-center justify-between gap-3 text-xs sm:text-sm font-bold">
+      <div class="flex items-center gap-2">
+        <span id="live-status-dot" class="w-3.5 h-3.5 rounded-full border-2 border-pop-black bg-pop-lime animate-pulse"></span>
+        <span id="live-status-text" class="text-pop-black font-extrabold tracking-wide uppercase">
+          Checking live café status...
+        </span>
+      </div>
+      <div class="flex items-center gap-3 text-pop-black/80">
+        <span class="hidden sm:inline font-semibold">📍 Shop No. 4, 128 Hazra Rd (Near Jatin Das Park Metro)</span>
+        <span class="inline-flex items-center gap-1 bg-white px-2.5 py-1 border-2 border-pop-black rounded-lg text-xs font-black shadow-brutal-sm">
+          <i data-lucide="clock" class="w-3.5 h-3.5 text-pop-orange"></i>
+          <span id="current-ist-time">--:--</span> IST
+        </span>
+      </div>
+    </div>
+  </section>
+
+  <!-- HERO SECTION (EXPLOSIVE POP ENERGY) -->
+  <section id="hero" class="relative overflow-hidden px-4 sm:px-8 pt-8 pb-16 lg:py-20 bg-pop-cream">
+    <!-- Quirky Background Decorative Shapes -->
+    <div class="absolute top-10 right-8 w-24 h-24 bg-pop-pink/20 rounded-full border-2 border-dashed border-pop-pink -z-0 pointer-events-none float-sticker" style="--rot: 12deg;"></div>
+    <div class="absolute bottom-8 left-6 w-32 h-32 bg-pop-yellow/30 rounded-3xl border-2 border-dashed border-pop-yellow -z-0 pointer-events-none float-sticker" style="--rot: -8deg;"></div>
+
+    <div class="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-12 items-center relative z-10">
+      
+      <!-- Hero Left: Copy & CTAs -->
+      <div class="lg:col-span-7 space-y-6">
+        
+        <!-- Funky Sticker Badge Row -->
+        <div class="flex flex-wrap items-center gap-2.5">
+          <span class="inline-flex items-center gap-1.5 px-3 py-1 bg-pop-yellow border-2 border-pop-black rounded-full font-display font-extrabold text-xs shadow-brutal-sm -rotate-2">
+            ⭐ 4.4 / 5.0 Google Rating
+          </span>
+          <span class="inline-flex items-center gap-1.5 px-3 py-1 bg-pop-pink text-white border-2 border-pop-black rounded-full font-display font-extrabold text-xs shadow-brutal-sm rotate-2">
+            🍕 Cheesy Bites & Shakes
+          </span>
+          <span class="inline-flex items-center gap-1.5 px-3 py-1 bg-pop-cyan text-pop-black border-2 border-pop-black rounded-full font-display font-extrabold text-xs shadow-brutal-sm -rotate-1">
+            🚇 Jatin Das Park Metro
+          </span>
+        </div>
+
+        <!-- Main Punchy Headline -->
+        <div class="space-y-2">
+          <h1 class="font-display font-black text-4xl sm:text-5xl md:text-6xl text-pop-black leading-[1.08] tracking-tight">
+            Your Daily <span class="bg-pop-yellow px-2 py-0.5 border-3 border-pop-black rounded-xl shadow-brutal inline-block -rotate-1">Adda</span> for Cheesy Bites, Crazy Shakes & <span class="text-pop-pink underline decoration-pop-black decoration-wavy decoration-2">Unmatched Vibes!</span>
+          </h1>
+          <p class="font-bold text-pop-orange text-lg sm:text-xl font-display mt-2">
+            Sips, Bites & Good Vibes in the Heart of South Kolkata ☕✨
+          </p>
+        </div>
+
+        <!-- Editorial Description -->
+        <p class="text-base sm:text-lg text-gray-800 font-medium leading-relaxed max-w-2xl">
+          Welcome to <strong class="text-pop-black font-black">The Cafeteria</strong> on Hazra Road! Whether it’s post-college hangouts near Jatin Das Park, quick romantic coffee dates, or late afternoon craving runs for loaded burgers and peri-peri fries—we brew happiness and serve legendary bites at pocket-friendly student prices!
+        </p>
+
+        <!-- CTA Action Buttons -->
+        <div class="flex flex-wrap items-center gap-4 pt-2">
+          <!-- WhatsApp Order Button -->
+          <a href="https://wa.me/916289974613?text=Hey%20The%20Cafeteria!%20I%20want%20to%20order%20some%20delicious%20food." target="_blank" rel="noopener noreferrer" class="px-6 py-3.5 bg-pop-lime text-pop-black font-display font-black text-base sm:text-lg border-3 border-pop-black rounded-2xl shadow-brutal hover:bg-lime-400 btn-brutal inline-flex items-center gap-3">
+            <i data-lucide="message-circle" class="w-6 h-6"></i>
+            <span>Order via WhatsApp</span>
+          </a>
+
+          <!-- Menu Scroll Button -->
+          <a href="#menu" class="px-6 py-3.5 bg-white text-pop-black font-display font-extrabold text-base sm:text-lg border-3 border-pop-black rounded-2xl shadow-brutal hover:bg-pop-yellow btn-brutal inline-flex items-center gap-2">
+            <i data-lucide="utensils" class="w-5 h-5 text-pop-orange"></i>
+            <span>Explore Menu</span>
+          </a>
+
+          <!-- Direct Call Button -->
+          <a href="tel:06289974613" class="px-4 py-3.5 bg-pop-cyan text-pop-black font-display font-extrabold text-sm sm:text-base border-3 border-pop-black rounded-2xl shadow-brutal hover:bg-cyan-300 btn-brutal inline-flex items-center gap-2" title="Call directly">
+            <i data-lucide="phone" class="w-5 h-5"></i>
+            <span>+91 62899 74613</span>
+          </a>
+        </div>
+
+        <!-- Trust Badges Strip -->
+        <div class="pt-4 grid grid-cols-2 sm:grid-cols-4 gap-3">
+          <div class="p-3 bg-white border-2 border-pop-black rounded-xl shadow-brutal-sm flex items-center gap-2.5">
+            <div class="w-8 h-8 rounded-lg bg-pop-yellow border-2 border-pop-black flex items-center justify-center font-bold text-pop-black shrink-0">
+              ₹
+            </div>
+            <div class="text-xs font-bold leading-tight">
+              Pocket Friendly Adda
+            </div>
+          </div>
+
+          <div class="p-3 bg-white border-2 border-pop-black rounded-xl shadow-brutal-sm flex items-center gap-2.5">
+            <div class="w-8 h-8 rounded-lg bg-pop-cyan border-2 border-pop-black flex items-center justify-center text-pop-black shrink-0">
+              <i data-lucide="wifi" class="w-4 h-4"></i>
+            </div>
+            <div class="text-xs font-bold leading-tight">
+              Free High-Speed Wi-Fi
+            </div>
+          </div>
+
+          <div class="p-3 bg-white border-2 border-pop-black rounded-xl shadow-brutal-sm flex items-center gap-2.5">
+            <div class="w-8 h-8 rounded-lg bg-pop-lime border-2 border-pop-black flex items-center justify-center text-pop-black shrink-0">
+              <i data-lucide="zap" class="w-4 h-4"></i>
+            </div>
+            <div class="text-xs font-bold leading-tight">
+              100% Good Vibes Only
+            </div>
+          </div>
+
+          <div class="p-3 bg-white border-2 border-pop-black rounded-xl shadow-brutal-sm flex items-center gap-2.5">
+            <div class="w-8 h-8 rounded-lg bg-pop-pink border-2 border-pop-black flex items-center justify-center text-white shrink-0">
+              <i data-lucide="map-pin" class="w-4 h-4"></i>
+            </div>
+            <div class="text-xs font-bold leading-tight">
+              2 Min from Metro
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Hero Right: Tilted Neo-Brutalist Visual Frame -->
+      <div class="lg:col-span-5 relative">
+        <div class="relative bg-white border-4 border-pop-black rounded-3xl p-3 shadow-brutal-xl rotate-1 hover:rotate-0 transition-transform duration-300">
+          
+          <!-- Image Container with Fallback -->
+          <div class="relative rounded-2xl overflow-hidden border-2 border-pop-black aspect-[4/3] bg-pop-butter">
+            <img 
+              src="/src/assets/images/the_cafeteria_real_hero.jpg" 
+              alt="The Cafeteria Hazra Road Interior with Green Turf Floor, Coffee Wall Art & Live Sports TV" 
+              class="w-full h-full object-cover"
+              loading="eager"
+              onerror="this.onerror=null; this.src='https://lh3.googleusercontent.com/grass-cs/AABkmLdy6mTnBTD6qAVt9uDn-3L0D0zpXNewlbp0heTIexkOkZ1ZWZUe03rYwx8DsBbwS7XGAkyZMbzTlfnTUF7lt8VtGT5XL1sEmNQi3cPAumETDztqkqaHH3U7CdN6lpMQTgWTErboDKKAikB_=w1200-h900-k-no';"
+            />
+            <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent pointer-events-none"></div>
+            
+            <div class="absolute bottom-3 left-3 right-3 text-white flex items-center justify-between">
+              <div>
+                <p class="font-display font-black text-lg drop-shadow">The Cafeteria Real Adda</p>
+                <p class="text-xs font-semibold text-pop-yellow drop-shadow">128 Hazra Rd, Bhowanipore • Turf Floor & Big Screen</p>
+              </div>
+              <a href="https://www.google.com/maps/place/The+Cafeteria/@22.5238237,88.3448886,3a,75y,90t/data=!3m8!1e2!3m6!1sCIABIhBXj09uxBZnKXQ-O-BNOq6Z!2e10!3e12!6shttps:%2F%2Flh3.googleusercontent.com%2Fgrass-cs%2FAABkmLdy6mTnBTD6qAVt9uDn-3L0D0zpXNewlbp0heTIexkOkZ1ZWZUe03rYwx8DsBbwS7XGAkyZMbzTlfnTUF7lt8VtGT5XL1sEmNQi3cPAumETDztqkqaHH3U7CdN6lpMQTgWTErboDKKAikB_%3Dw114-h86-k-no!7i4096!8i3072!4m11!1m2!2m1!1sthe+cafeteria!3m7!1s0x3a02777c5ee343ff:0x51b38b50da5d4c10!8m2!3d22.5238237!4d88.3448886!10e5!15sCg10aGUgY2FmZXRlcmlhWg8iDXRoZSBjYWZldGVyaWGSAQRjYWZl4AEA!16s%2Fg%2F11w3m7fm3q" target="_blank" rel="noopener noreferrer" class="px-2.5 py-1 bg-pop-pink text-white font-extrabold text-xs rounded-lg border-2 border-pop-black shadow-brutal-sm hover:scale-105 transition-transform" title="View on Google Maps">
+                4.4 ★ GOOGLE MAPS ↗
+              </a>
+            </div>
+          </div>
+
+          <!-- Quirky Overlapping Polaroid Stickers -->
+          <div class="absolute -top-4 -left-4 bg-pop-yellow border-3 border-pop-black px-3 py-1.5 rounded-xl font-display font-extrabold text-xs text-pop-black shadow-brutal -rotate-6">
+            📸 REAL CAFE SNAPSHOT!
+          </div>
+
+          <div class="absolute -bottom-4 -right-3 bg-pop-lime border-3 border-pop-black px-4 py-1.5 rounded-xl font-display font-extrabold text-xs text-pop-black shadow-brutal rotate-3">
+            📺 LIVE MATCH SCREEN
+          </div>
+        </div>
+
+        <!-- Floating Quick Adda Quote Box -->
+        <div class="mt-6 bg-pop-butter border-3 border-pop-black rounded-2xl p-4 shadow-brutal flex items-center gap-3">
+          <div class="w-10 h-10 rounded-full bg-pop-orange text-white border-2 border-pop-black flex items-center justify-center font-black text-lg shrink-0">
+            💬
+          </div>
+          <div>
+            <p class="text-xs font-bold text-pop-black italic">
+              "Hazra's happiest corner for evening conversations, warm cappuccinos & loaded burgers."
+            </p>
+            <p class="text-[11px] font-extrabold text-pop-pink mt-0.5 uppercase tracking-wide">
+              — Kolkata Foodie Community
+            </p>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- QUICK STATS & ADDA HIGHLIGHTS BANNER -->
+  <section class="bg-pop-orange border-y-4 border-pop-black py-8 px-4 sm:px-8 text-pop-black">
+    <div class="max-w-7xl mx-auto grid grid-cols-2 md:grid-cols-4 gap-4 sm:gap-6 text-center">
+      
+      <div class="bg-white border-3 border-pop-black p-4 rounded-2xl shadow-brutal">
+        <div class="font-display font-black text-3xl sm:text-4xl text-pop-black">4.4 ★</div>
+        <div class="font-extrabold text-xs sm:text-sm text-gray-700 mt-1">Google Rating Badge</div>
+        <div class="text-[11px] font-semibold text-pop-pink">500+ Local Reviews</div>
+      </div>
+
+      <div class="bg-pop-yellow border-3 border-pop-black p-4 rounded-2xl shadow-brutal">
+        <div class="font-display font-black text-3xl sm:text-4xl text-pop-black">₹99+</div>
+        <div class="font-extrabold text-xs sm:text-sm text-gray-900 mt-1">Pocket Friendly</div>
+        <div class="text-[11px] font-semibold text-pop-black">Student Adda Prices</div>
+      </div>
+
+      <div class="bg-pop-cyan border-3 border-pop-black p-4 rounded-2xl shadow-brutal">
+        <div class="font-display font-black text-3xl sm:text-4xl text-pop-black">2 MIN</div>
+        <div class="font-extrabold text-xs sm:text-sm text-gray-900 mt-1">From Metro</div>
+        <div class="text-[11px] font-semibold text-pop-black">Jatin Das Park Station</div>
+      </div>
+
+      <div class="bg-pop-lime border-3 border-pop-black p-4 rounded-2xl shadow-brutal">
+        <div class="font-display font-black text-3xl sm:text-4xl text-pop-black">100%</div>
+        <div class="font-extrabold text-xs sm:text-sm text-gray-900 mt-1">Fresh & Sizzling</div>
+        <div class="text-[11px] font-semibold text-pop-black">Made to Order Always</div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- FUNKY FOOD & BEVERAGE MENU SECTION -->
+  <section id="menu" class="py-16 px-4 sm:px-8 bg-pop-cream">
+    <div class="max-w-7xl mx-auto space-y-10">
+      
+      <!-- Section Title & Kicker -->
+      <div class="text-center space-y-3 max-w-3xl mx-auto">
+        <div class="inline-flex items-center gap-2 px-4 py-1.5 bg-pop-pink text-white font-display font-black text-xs sm:text-sm uppercase tracking-wider border-2 border-pop-black rounded-full shadow-brutal-sm -rotate-1">
+          🔥 The Ultimate Food Lineup
+        </div>
+        <h2 class="font-display font-black text-3xl sm:text-5xl text-pop-black tracking-tight">
+          Funky Bites & Crave-Worthy Sips
+        </h2>
+        <p class="text-base sm:text-lg text-gray-700 font-medium">
+          Every item is handcrafted fresh with rich melted cheese, fiery sauces, and premium roasts. Click any item to customize or order directly on WhatsApp!
+        </p>
+      </div>
+
+      <!-- Controls: Category Filter Tabs & Quick Search -->
+      <div class="space-y-4">
+        
+        <!-- Category Filter Tabs -->
+        <div class="flex items-center justify-start sm:justify-center gap-2 overflow-x-auto pb-2 scrollbar-none">
+          <button onclick="filterMenu('all')" data-category="all" class="menu-tab-btn active px-4 py-2 bg-pop-yellow text-pop-black font-display font-extrabold text-xs sm:text-sm border-2 border-pop-black rounded-xl shadow-brutal whitespace-nowrap btn-brutal">
+            ✨ All Yummies
+          </button>
+          <button onclick="filterMenu('brews')" data-category="brews" class="menu-tab-btn px-4 py-2 bg-white text-pop-black font-display font-extrabold text-xs sm:text-sm border-2 border-pop-black rounded-xl shadow-brutal-sm hover:bg-pop-yellow whitespace-nowrap btn-brutal">
+            ☕ Brews & Coolers
+          </button>
+          <button onclick="filterMenu('burgers')" data-category="burgers" class="menu-tab-btn px-4 py-2 bg-white text-pop-black font-display font-extrabold text-xs sm:text-sm border-2 border-pop-black rounded-xl shadow-brutal-sm hover:bg-pop-yellow whitespace-nowrap btn-brutal">
+            🍔 Burgers & Sandwiches
+          </button>
+          <button onclick="filterMenu('munchies')" data-category="munchies" class="menu-tab-btn px-4 py-2 bg-white text-pop-black font-display font-extrabold text-xs sm:text-sm border-2 border-pop-black rounded-xl shadow-brutal-sm hover:bg-pop-yellow whitespace-nowrap btn-brutal">
+            🍟 Quick Munchies
+          </button>
+          <button onclick="filterMenu('pizzas')" data-category="pizzas" class="menu-tab-btn px-4 py-2 bg-white text-pop-black font-display font-extrabold text-xs sm:text-sm border-2 border-pop-black rounded-xl shadow-brutal-sm hover:bg-pop-yellow whitespace-nowrap btn-brutal">
+            🍕 Pizzas & Pastas
+          </button>
+          <button onclick="filterMenu('desserts')" data-category="desserts" class="menu-tab-btn px-4 py-2 bg-white text-pop-black font-display font-extrabold text-xs sm:text-sm border-2 border-pop-black rounded-xl shadow-brutal-sm hover:bg-pop-yellow whitespace-nowrap btn-brutal">
+            🍨 Shakes & Desserts
+          </button>
+        </div>
+
+        <!-- Search & Filter Options Bar -->
+        <div class="flex flex-col sm:flex-row items-center justify-between gap-3 bg-white p-3 border-3 border-pop-black rounded-2xl shadow-brutal">
+          
+          <!-- Search Input -->
+          <div class="relative w-full sm:w-80">
+            <i data-lucide="search" class="w-4 h-4 text-gray-500 absolute left-3 top-1/2 -translate-y-1/2"></i>
+            <input 
+              type="text" 
+              id="menu-search-input" 
+              oninput="handleSearchMenu(this.value)" 
+              placeholder="Search burgers, coffee, pasta..." 
+              class="w-full pl-9 pr-3 py-2 text-sm font-semibold border-2 border-pop-black rounded-xl bg-pop-cream focus:outline-none focus:ring-2 focus:ring-pop-pink"
+            />
+          </div>
+
+          <!-- Veg / Non-Veg Quick Toggles -->
+          <div class="flex items-center gap-2 self-start sm:self-auto text-xs font-bold">
+            <button onclick="toggleDietFilter('all')" id="diet-all-btn" class="diet-btn active px-3 py-1.5 rounded-lg border-2 border-pop-black bg-pop-black text-white">
+              All Items
+            </button>
+            <button onclick="toggleDietFilter('veg')" id="diet-veg-btn" class="diet-btn px-3 py-1.5 rounded-lg border-2 border-pop-black bg-white hover:bg-emerald-100 text-emerald-800 flex items-center gap-1">
+              <span class="w-2.5 h-2.5 rounded-full bg-emerald-600 border border-emerald-800"></span> Veg Only
+            </button>
+            <button onclick="toggleDietFilter('nonveg')" id="diet-nonveg-btn" class="diet-btn px-3 py-1.5 rounded-lg border-2 border-pop-black bg-white hover:bg-red-100 text-red-800 flex items-center gap-1">
+              <span class="w-2.5 h-2.5 rounded-full bg-red-600 border border-red-800"></span> Non-Veg
+            </button>
+          </div>
+
+        </div>
+
+      </div>
+
+      <!-- Menu Grid Cards Container -->
+      <div id="menu-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <!-- Rendered dynamically via JavaScript with complete details -->
+      </div>
+
+      <!-- Menu Bottom WhatsApp Callout -->
+      <div class="bg-pop-butter border-4 border-pop-black p-6 rounded-3xl shadow-brutal-lg flex flex-col md:flex-row items-center justify-between gap-6">
+        <div class="space-y-1 text-center md:text-left">
+          <h3 class="font-display font-black text-2xl text-pop-black">Want custom toppings or extra spicy peri-peri?</h3>
+          <p class="text-sm font-semibold text-gray-800">Just let us know on WhatsApp! We customize your bites and have them ready when you arrive.</p>
+        </div>
+        <a href="https://wa.me/916289974613?text=Hey%20The%20Cafeteria!%20I'd%20like%20to%20customize%20my%20order." target="_blank" rel="noopener noreferrer" class="px-6 py-3 bg-pop-pink text-white font-display font-black text-sm sm:text-base border-3 border-pop-black rounded-xl shadow-brutal hover:bg-pink-600 btn-brutal whitespace-nowrap inline-flex items-center gap-2">
+          <i data-lucide="message-square" class="w-5 h-5"></i>
+          <span>Custom WhatsApp Order</span>
+        </a>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- THE VIBE & GALLERY GRID (INSTA-WORTHY VISUALS) -->
+  <section id="gallery" class="py-16 px-4 sm:px-8 bg-pop-lavender border-y-4 border-pop-black">
+    <div class="max-w-7xl mx-auto space-y-10">
+      
+      <div class="text-center space-y-3 max-w-3xl mx-auto">
+        <div class="inline-flex items-center gap-2 px-4 py-1.5 bg-pop-lime text-pop-black font-display font-black text-xs sm:text-sm uppercase tracking-wider border-2 border-pop-black rounded-full shadow-brutal-sm rotate-1">
+          📸 Insta-Worthy Adda Moments
+        </div>
+        <h2 class="font-display font-black text-3xl sm:text-5xl text-pop-black tracking-tight">
+          The Cafeteria Vibe & Gallery
+        </h2>
+        <p class="text-base sm:text-lg text-gray-800 font-medium">
+          Step into Hazra’s warmest hangout! Cozy seating, nostalgic pop posters, steaming mugs, and genuine laughter. Click any snapshot to zoom!
+        </p>
+      </div>
+
+      <!-- Tilted Polaroid Gallery Grid -->
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+        
+        <!-- Polaroid Card 1: Real Cafe Hangout -->
+        <div onclick="openLightbox('/src/assets/images/the_cafeteria_real_hero.jpg', 'Real Hazra Road Café Interior', 'Artificial turf floor, big screen playing live matches, checked tables, and coffee typography wall art at 128 Hazra Rd.')" class="bg-white border-4 border-pop-black p-3.5 rounded-3xl shadow-brutal-lg hover:shadow-brutal-xl hover:-translate-y-1.5 transition-all cursor-pointer group -rotate-1 hover:rotate-0">
+          <div class="relative overflow-hidden rounded-2xl border-2 border-pop-black aspect-[4/3] bg-pop-yellow">
+            <img 
+              src="/src/assets/images/the_cafeteria_real_hero.jpg" 
+              alt="Real Interior of The Cafeteria Hazra Road with Turf Floor and Live TV" 
+              class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+              loading="lazy"
+            />
+            <span class="absolute top-2.5 right-2.5 px-2.5 py-1 bg-pop-lime text-pop-black font-extrabold text-[11px] rounded-lg border-2 border-pop-black shadow-brutal-sm">
+              VERIFIED REAL CAFE
+            </span>
+          </div>
+          <div class="pt-3 pb-1 px-1">
+            <h4 class="font-display font-black text-lg text-pop-black">Real Hazra Road Interior</h4>
+            <p class="text-xs font-semibold text-gray-700 mt-0.5">Green turf seating, live sports screenings & coffee wall art.</p>
+          </div>
+        </div>
+
+        <!-- Polaroid Card 2: Food Feast Spread -->
+        <div onclick="openLightbox('/src/assets/images/cafe_food_spread_1794381215970.jpg', 'Cheesy Feasts & Frappes', 'Signature double cheese burger, fiery peri peri fries, thin crust pizza slice & iced hazelnut frappe.')" class="bg-white border-4 border-pop-black p-3.5 rounded-3xl shadow-brutal-lg hover:shadow-brutal-xl hover:-translate-y-1.5 transition-all cursor-pointer group rotate-1 hover:rotate-0">
+          <div class="relative overflow-hidden rounded-2xl border-2 border-pop-black aspect-[4/3] bg-pop-pink">
+            <img 
+              src="/src/assets/images/cafe_food_spread_1794381215970.jpg" 
+              alt="Loaded Burger, Fries, Pizza and Frappe at The Cafeteria" 
+              class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+              loading="lazy"
+            />
+            <span class="absolute top-2.5 right-2.5 px-2.5 py-1 bg-pop-lime text-pop-black font-extrabold text-[11px] rounded-lg border-2 border-pop-black shadow-brutal-sm">
+              CRISPY & CHEESY
+            </span>
+          </div>
+          <div class="pt-3 pb-1 px-1">
+            <h4 class="font-display font-black text-lg text-pop-black">Cheesy Feasts & Frappes</h4>
+            <p class="text-xs font-semibold text-gray-700 mt-0.5">Cooked fresh to fuel your afternoon appetite.</p>
+          </div>
+        </div>
+
+        <!-- Polaroid Card 3: Cozy Booth & Friends -->
+        <div onclick="openLightbox('/src/assets/images/cafe_interior_cozy_1794381216322.jpg', 'Pop-Art Corner Booth', 'Cozy wooden booth with retro pop posters, warm glow, and cheerful college conversations.')" class="bg-white border-4 border-pop-black p-3.5 rounded-3xl shadow-brutal-lg hover:shadow-brutal-xl hover:-translate-y-1.5 transition-all cursor-pointer group -rotate-2 hover:rotate-0">
+          <div class="relative overflow-hidden rounded-2xl border-2 border-pop-black aspect-[4/3] bg-pop-cyan">
+            <img 
+              src="/src/assets/images/cafe_interior_cozy_1794381216322.jpg" 
+              alt="Pop Art Corner Booth at The Cafeteria" 
+              class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+              loading="lazy"
+            />
+            <span class="absolute top-2.5 right-2.5 px-2.5 py-1 bg-pop-orange text-white font-extrabold text-[11px] rounded-lg border-2 border-pop-black shadow-brutal-sm">
+              COZY CORNER
+            </span>
+          </div>
+          <div class="pt-3 pb-1 px-1">
+            <h4 class="font-display font-black text-lg text-pop-black">Pop-Art Corner Booth</h4>
+            <p class="text-xs font-semibold text-gray-700 mt-0.5">The coziest spot for group projects and date nights.</p>
+          </div>
+        </div>
+
+        <!-- Polaroid Card 4: Cold Coffee & Brownie Waffle -->
+        <div onclick="openLightbox('/src/assets/images/cafe_cold_coffee_dessert_1794381216077.jpg', 'Cold Coffee & Waffle Sundae', 'Decadent tall cold coffee with rich ice cream drizzle paired with a hot chocolate waffle sundae.')" class="bg-white border-4 border-pop-black p-3.5 rounded-3xl shadow-brutal-lg hover:shadow-brutal-xl hover:-translate-y-1.5 transition-all cursor-pointer group rotate-2 hover:rotate-0">
+          <div class="relative overflow-hidden rounded-2xl border-2 border-pop-black aspect-[4/3] bg-pop-butter">
+            <img 
+              src="/src/assets/images/cafe_cold_coffee_dessert_1794381216077.jpg" 
+              alt="Cold Coffee with Ice Cream and Brownie Waffle Sundae" 
+              class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+              loading="lazy"
+            />
+            <span class="absolute top-2.5 right-2.5 px-2.5 py-1 bg-pop-pink text-white font-extrabold text-[11px] rounded-lg border-2 border-pop-black shadow-brutal-sm">
+              SWEET TOOTH
+            </span>
+          </div>
+          <div class="pt-3 pb-1 px-1">
+            <h4 class="font-display font-black text-lg text-pop-black">Cold Coffee & Waffle Sundae</h4>
+            <p class="text-xs font-semibold text-gray-700 mt-0.5">Sweet endings to every legendary adda session.</p>
+          </div>
+        </div>
+
+        <!-- Polaroid Card 5: Hazra Adda Culture Card -->
+        <div onclick="openLightbox('/src/assets/images/hero_cafe_vibe_1794381214710.jpg', 'South Kolkata Coffee Culture', 'Hazra Road street life, friendly neighborhood faces, and relaxing warm tea & snacks.')" class="bg-white border-4 border-pop-black p-3.5 rounded-3xl shadow-brutal-lg hover:shadow-brutal-xl hover:-translate-y-1.5 transition-all cursor-pointer group -rotate-1 hover:rotate-0">
+          <div class="relative overflow-hidden rounded-2xl border-2 border-pop-black aspect-[4/3] bg-pop-yellow flex items-center justify-center p-6 text-center">
+            <div class="space-y-3">
+              <span class="text-5xl">☕🚇</span>
+              <h4 class="font-display font-black text-2xl text-pop-black">Hazra Rd • Patuapara</h4>
+              <p class="text-xs font-bold text-gray-800">
+                2 minutes walk from Jatin Das Park Metro Station. The heartbeat of Bhowanipore youth culture!
+              </p>
+            </div>
+          </div>
+          <div class="pt-3 pb-1 px-1">
+            <h4 class="font-display font-black text-lg text-pop-black">Bhowanipore Adda Culture</h4>
+            <p class="text-xs font-semibold text-gray-700 mt-0.5">Where tradition meets modern retro-pop café aesthetics.</p>
+          </div>
+        </div>
+
+        <!-- Polaroid Card 6: Fresh Kitchen & Barista -->
+        <div onclick="openLightbox('/src/assets/images/cafe_food_spread_1794381215970.jpg', 'Crafted with Passion', 'Every burger is grilled fresh, every coffee ground with perfection, and every shake thick and frothy.')" class="bg-white border-4 border-pop-black p-3.5 rounded-3xl shadow-brutal-lg hover:shadow-brutal-xl hover:-translate-y-1.5 transition-all cursor-pointer group rotate-1 hover:rotate-0">
+          <div class="relative overflow-hidden rounded-2xl border-2 border-pop-black aspect-[4/3] bg-pop-lime flex items-center justify-center p-6 text-center">
+            <div class="space-y-3">
+              <span class="text-5xl">⚡❤️</span>
+              <h4 class="font-display font-black text-2xl text-pop-black">100% Quality Bites</h4>
+              <p class="text-xs font-bold text-gray-900">
+                Crafted with love, hygiene, and authentic flavors right here in South Kolkata.
+              </p>
+            </div>
+          </div>
+          <div class="pt-3 pb-1 px-1">
+            <h4 class="font-display font-black text-lg text-pop-black">Crafted with Pure Passion</h4>
+            <p class="text-xs font-semibold text-gray-700 mt-0.5">Loved by college students, families, and neighborhood foodies.</p>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- CUSTOMER REVIEWS & GOOGLE RATINGS (ADDA TESTIMONIALS) -->
+  <section id="reviews" class="py-16 px-4 sm:px-8 bg-pop-cream">
+    <div class="max-w-7xl mx-auto space-y-12">
+      
+      <!-- Section Header with Official Rating Badge -->
+      <div class="flex flex-col md:flex-row items-center justify-between gap-6 bg-pop-yellow border-4 border-pop-black p-6 sm:p-8 rounded-3xl shadow-brutal-xl">
+        <div class="space-y-2 text-center md:text-left">
+          <div class="inline-flex items-center gap-1.5 px-3 py-1 bg-white border-2 border-pop-black rounded-full font-display font-black text-xs uppercase shadow-brutal-sm">
+            ⭐ Verified Google Reviews
+          </div>
+          <h2 class="font-display font-black text-3xl sm:text-4xl text-pop-black">
+            What South Kolkata Foodies Say
+          </h2>
+          <p class="text-sm sm:text-base font-semibold text-gray-900 max-w-xl">
+            Real reviews from college students, Hazra locals, and food enthusiasts who make The Cafeteria their second home!
+          </p>
+        </div>
+
+        <div class="bg-white border-3 border-pop-black p-5 rounded-2xl shadow-brutal text-center shrink-0 w-full md:w-auto">
+          <div class="flex items-center justify-center gap-1 text-amber-500 mb-1">
+            <i data-lucide="star" class="w-6 h-6 fill-amber-400 text-amber-400"></i>
+            <i data-lucide="star" class="w-6 h-6 fill-amber-400 text-amber-400"></i>
+            <i data-lucide="star" class="w-6 h-6 fill-amber-400 text-amber-400"></i>
+            <i data-lucide="star" class="w-6 h-6 fill-amber-400 text-amber-400"></i>
+            <i data-lucide="star-half" class="w-6 h-6 fill-amber-400 text-amber-400"></i>
+          </div>
+          <div class="font-display font-black text-4xl text-pop-black">4.4 / 5.0</div>
+          <div class="text-xs font-bold text-gray-700 uppercase tracking-wider mt-0.5">Google Rating Score</div>
+          <a href="https://maps.app.goo.gl/q4FdHGBXpMu4Ccby7" target="_blank" rel="noopener noreferrer" class="mt-2 inline-block text-xs font-black text-pop-pink underline hover:text-pop-orange">
+            View on Google Maps →
+          </a>
+        </div>
+      </div>
+
+      <!-- Testimonial Cards Grid -->
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+        
+        <!-- Review 1 -->
+        <div class="bg-white border-4 border-pop-black p-6 rounded-3xl shadow-brutal flex flex-col justify-between space-y-4 hover:translate-y-[-4px] transition-transform">
+          <div class="space-y-3">
+            <div class="flex items-center justify-between">
+              <div class="flex items-center gap-1 text-amber-400">
+                <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+                <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+                <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+                <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+                <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+              </div>
+              <span class="text-xs font-extrabold text-white bg-pop-pink px-2.5 py-0.5 rounded-full border border-pop-black">
+                5.0 / 5
+              </span>
+            </div>
+            <p class="text-sm font-semibold text-gray-800 leading-relaxed italic">
+              "Best budget-friendly cafe near Hazra! The Cold Coffee and Peri-Peri Fries are absolute must-haves. Great ambience for evening hangouts with college buddies."
+            </p>
+          </div>
+          <div class="flex items-center gap-3 pt-3 border-t-2 border-gray-100">
+            <div class="w-10 h-10 rounded-full bg-pop-cyan border-2 border-pop-black flex items-center justify-center font-black text-sm text-pop-black">
+              RM
+            </div>
+            <div>
+              <div class="font-display font-extrabold text-sm text-pop-black">Rupsha Mukherjee</div>
+              <div class="text-[11px] font-semibold text-gray-500">Asutosh College Student • Local Guide</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Review 2 -->
+        <div class="bg-white border-4 border-pop-black p-6 rounded-3xl shadow-brutal flex flex-col justify-between space-y-4 hover:translate-y-[-4px] transition-transform">
+          <div class="space-y-3">
+            <div class="flex items-center justify-between">
+              <div class="flex items-center gap-1 text-amber-400">
+                <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+                <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+                <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+                <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+                <i data-lucide="star-half" class="w-4 h-4 fill-amber-400"></i>
+              </div>
+              <span class="text-xs font-extrabold text-pop-black bg-pop-yellow px-2.5 py-0.5 rounded-full border border-pop-black">
+                4.5 / 5
+              </span>
+            </div>
+            <p class="text-sm font-semibold text-gray-800 leading-relaxed italic">
+              "Super chill spot near Jatin Das Park Metro. Cozy seating, polite staff, and the burgers are loaded with cheese. Sunday 4 PM visit was totally worth it!"
+            </p>
+          </div>
+          <div class="flex items-center gap-3 pt-3 border-t-2 border-gray-100">
+            <div class="w-10 h-10 rounded-full bg-pop-lime border-2 border-pop-black flex items-center justify-center font-black text-sm text-pop-black">
+              AB
+            </div>
+            <div>
+              <div class="font-display font-extrabold text-sm text-pop-black">Arko Banerjee</div>
+              <div class="text-[11px] font-semibold text-gray-500">Bhowanipore Resident • Sunday Adda Regular</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Review 3 -->
+        <div class="bg-white border-4 border-pop-black p-6 rounded-3xl shadow-brutal flex flex-col justify-between space-y-4 hover:translate-y-[-4px] transition-transform">
+          <div class="space-y-3">
+            <div class="flex items-center justify-between">
+              <div class="flex items-center gap-1 text-amber-400">
+                <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+                <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+                <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+                <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+                <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+              </div>
+              <span class="text-xs font-extrabold text-white bg-pop-lime px-2.5 py-0.5 rounded-full border border-pop-black">
+                5.0 / 5
+              </span>
+            </div>
+            <p class="text-sm font-semibold text-gray-800 leading-relaxed italic">
+              "Our regular college adda spot! Quick service, tasty pasta, and very pocket-friendly for students. Also their hazelnut frappe is heaven on hot days."
+            </p>
+          </div>
+          <div class="flex items-center gap-3 pt-3 border-t-2 border-gray-100">
+            <div class="w-10 h-10 rounded-full bg-pop-orange text-white border-2 border-pop-black flex items-center justify-center font-black text-sm">
+              DS
+            </div>
+            <div>
+              <div class="font-display font-extrabold text-sm text-pop-black">Debarghya Sen</div>
+              <div class="text-[11px] font-semibold text-gray-500">Hazra Rd Regular • Food Critic</div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- TIMINGS & WORKING HOURS MATRIX -->
+  <section id="timings" class="py-16 px-4 sm:px-8 bg-pop-yellow border-y-4 border-pop-black">
+    <div class="max-w-5xl mx-auto space-y-8">
+      
+      <div class="text-center space-y-2">
+        <span class="px-3.5 py-1 bg-white border-2 border-pop-black rounded-full font-display font-black text-xs uppercase shadow-brutal-sm">
+          ⏰ Operating Hours & Schedule
+        </span>
+        <h2 class="font-display font-black text-3xl sm:text-4xl text-pop-black">
+          When to Drop In For The Adda
+        </h2>
+        <p class="text-sm sm:text-base font-semibold text-gray-900">
+          We operate 7 days a week! Note our special Sunday evening hours designed for Kolkata's prime hangout time.
+        </p>
+      </div>
+
+      <!-- Schedule Matrix Card -->
+      <div class="bg-white border-4 border-pop-black rounded-3xl p-6 sm:p-8 shadow-brutal-xl space-y-6">
+        
+        <!-- Live Open / Closed Widget -->
+        <div id="status-card-widget" class="p-4 rounded-2xl border-3 border-pop-black bg-pop-lime shadow-brutal flex flex-col sm:flex-row items-center justify-between gap-4">
+          <div class="flex items-center gap-3 text-center sm:text-left">
+            <div class="w-12 h-12 rounded-xl bg-white border-2 border-pop-black flex items-center justify-center font-black text-2xl shadow-brutal-sm shrink-0">
+              ⚡
+            </div>
+            <div>
+              <div id="matrix-status-header" class="font-display font-black text-lg sm:text-xl text-pop-black">
+                WE ARE CURRENTLY OPEN!
+              </div>
+              <div id="matrix-status-sub" class="text-xs font-bold text-pop-black/80">
+                Come on in for coffee, hot snacks, or table adda.
+              </div>
+            </div>
+          </div>
+          <a href="https://wa.me/916289974613?text=Hey%20The%20Cafeteria!%20Are%20seats%20available%20right%20now?" target="_blank" rel="noopener noreferrer" class="px-5 py-2.5 bg-white text-pop-black font-display font-black text-xs sm:text-sm border-2 border-pop-black rounded-xl shadow-brutal hover:bg-pop-yellow btn-brutal whitespace-nowrap">
+            Check Live Table Space
+          </a>
+        </div>
+
+        <!-- Days Breakdown Grid -->
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6 pt-2">
+          
+          <!-- Mon-Sat -->
+          <div class="bg-pop-cream border-3 border-pop-black p-5 rounded-2xl shadow-brutal space-y-2">
+            <div class="flex items-center justify-between">
+              <span class="font-display font-black text-lg text-pop-black">Monday — Saturday</span>
+              <span class="px-2.5 py-0.5 bg-pop-cyan text-pop-black text-xs font-black rounded-full border-2 border-pop-black">
+                Full Day Adda
+              </span>
+            </div>
+            <div class="font-display font-extrabold text-2xl text-pop-orange">
+              12:00 PM – 10:00 PM
+            </div>
+            <p class="text-xs font-semibold text-gray-700">
+              Perfect for college lunch breaks, work-from-cafe sessions, and evening munchies.
+            </p>
+          </div>
+
+          <!-- Sunday Special -->
+          <div class="bg-pop-butter border-3 border-pop-black p-5 rounded-2xl shadow-brutal space-y-2">
+            <div class="flex items-center justify-between">
+              <span class="font-display font-black text-lg text-pop-black">Sunday</span>
+              <span class="px-2.5 py-0.5 bg-pop-pink text-white text-xs font-black rounded-full border-2 border-pop-black">
+                Special Evening Adda
+              </span>
+            </div>
+            <div class="font-display font-extrabold text-2xl text-pop-pink">
+              4:00 PM – 10:00 PM
+            </div>
+            <p class="text-xs font-semibold text-gray-700">
+              Opens exclusively for South Kolkata's prime evening leisure adda & weekend wind-down.
+            </p>
+          </div>
+
+        </div>
+
+        <!-- Pro Tip Box -->
+        <div class="bg-pop-lavender border-2 border-dashed border-pop-black p-4 rounded-xl flex items-center gap-3 text-xs sm:text-sm font-bold text-pop-black">
+          <i data-lucide="info" class="w-5 h-5 text-pop-orange shrink-0"></i>
+          <span>
+            <strong>Pro Tip for Squads:</strong> Weekend evenings (5:30 PM to 8:30 PM) fill up quickly! You can reserve your spot in advance via our quick WhatsApp booking form below.
+          </span>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- INTERACTIVE TABLE BOOKING & QUICK ORDER FORM -->
+  <section id="booking" class="py-16 px-4 sm:px-8 bg-pop-cream">
+    <div class="max-w-4xl mx-auto space-y-8">
+      
+      <div class="text-center space-y-3">
+        <span class="px-3.5 py-1 bg-pop-pink text-white border-2 border-pop-black rounded-full font-display font-black text-xs uppercase shadow-brutal-sm -rotate-1">
+          ⚡ Instant WhatsApp Reservation
+        </span>
+        <h2 class="font-display font-black text-3xl sm:text-5xl text-pop-black">
+          Book a Table or Pre-Order Your Bites
+        </h2>
+        <p class="text-base sm:text-lg text-gray-700 font-medium">
+          Planning an adda with college friends or a special date night? Fill in details below and it automatically generates a formatted WhatsApp confirmation!
+        </p>
+      </div>
+
+      <!-- Booking Form Card -->
+      <form id="booking-form" onsubmit="handleBookingSubmit(event)" class="bg-white border-4 border-pop-black rounded-3xl p-6 sm:p-10 shadow-brutal-xl space-y-6">
+        
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+          
+          <!-- Name Field -->
+          <div class="space-y-1.5">
+            <label for="book-name" class="block font-display font-extrabold text-sm text-pop-black">
+              Your Full Name <span class="text-pop-pink">*</span>
+            </label>
+            <input 
+              type="text" 
+              id="book-name" 
+              required 
+              placeholder="e.g., Anirban Roy" 
+              class="w-full px-4 py-3 bg-pop-cream border-2 border-pop-black rounded-xl font-semibold text-sm focus:outline-none focus:ring-2 focus:ring-pop-yellow"
+            />
+          </div>
+
+          <!-- WhatsApp Number Field -->
+          <div class="space-y-1.5">
+            <label for="book-phone" class="block font-display font-extrabold text-sm text-pop-black">
+              WhatsApp Contact Number <span class="text-pop-pink">*</span>
+            </label>
+            <input 
+              type="tel" 
+              id="book-phone" 
+              required 
+              placeholder="e.g., 9876543210" 
+              class="w-full px-4 py-3 bg-pop-cream border-2 border-pop-black rounded-xl font-semibold text-sm focus:outline-none focus:ring-2 focus:ring-pop-yellow"
+            />
+          </div>
+
+          <!-- Guests Count -->
+          <div class="space-y-1.5">
+            <label for="book-guests" class="block font-display font-extrabold text-sm text-pop-black">
+              Number of People <span class="text-pop-pink">*</span>
+            </label>
+            <select 
+              id="book-guests" 
+              required 
+              class="w-full px-4 py-3 bg-pop-cream border-2 border-pop-black rounded-xl font-semibold text-sm focus:outline-none focus:ring-2 focus:ring-pop-yellow"
+            >
+              <option value="1 Person (Solo Coffee)">1 Person (Solo Coffee & Work)</option>
+              <option value="2 People (Date / Catch-up)" selected>2 People (Date / Catch-up)</option>
+              <option value="3-4 People (Squad Adda)">3-4 People (Squad Adda)</option>
+              <option value="5-8 People (Big Group / Celebration)">5-8 People (Big Group / Celebration)</option>
+              <option value="8+ People (Party Booking)">8+ People (Party Booking)</option>
+            </select>
+          </div>
+
+          <!-- Craving Dropdown -->
+          <div class="space-y-1.5">
+            <label for="book-craving" class="block font-display font-extrabold text-sm text-pop-black">
+              What are you craving most?
+            </label>
+            <select 
+              id="book-craving" 
+              class="w-full px-4 py-3 bg-pop-cream border-2 border-pop-black rounded-xl font-semibold text-sm focus:outline-none focus:ring-2 focus:ring-pop-yellow"
+            >
+              <option value="Double Cheese Burgers & Peri-Peri Fries">Double Cheese Burgers & Peri-Peri Fries</option>
+              <option value="Cold Coffee with Ice Cream & Brownie">Cold Coffee with Ice Cream & Brownie</option>
+              <option value="Thin Crust Pizzas & White Sauce Pasta">Thin Crust Pizzas & White Sauce Pasta</option>
+              <option value="Hazelnut Frappe & Quick Finger Food">Hazelnut Frappe & Quick Finger Food</option>
+              <option value="Surprise Me With The Chef's Special!">Surprise Me With The Chef's Special!</option>
+            </select>
+          </div>
+
+          <!-- Date -->
+          <div class="space-y-1.5">
+            <label for="book-date" class="block font-display font-extrabold text-sm text-pop-black">
+              Date <span class="text-pop-pink">*</span>
+            </label>
+            <input 
+              type="date" 
+              id="book-date" 
+              required 
+              class="w-full px-4 py-3 bg-pop-cream border-2 border-pop-black rounded-xl font-semibold text-sm focus:outline-none focus:ring-2 focus:ring-pop-yellow"
+            />
+          </div>
+
+          <!-- Time Slot -->
+          <div class="space-y-1.5">
+            <label for="book-time" class="block font-display font-extrabold text-sm text-pop-black">
+              Preferred Time Slot <span class="text-pop-pink">*</span>
+            </label>
+            <select 
+              id="book-time" 
+              required 
+              class="w-full px-4 py-3 bg-pop-cream border-2 border-pop-black rounded-xl font-semibold text-sm focus:outline-none focus:ring-2 focus:ring-pop-yellow"
+            >
+              <option value="12:30 PM (Mon-Sat Lunch)">12:30 PM (Mon-Sat Lunch)</option>
+              <option value="2:00 PM (Afternoon)">2:00 PM (Afternoon)</option>
+              <option value="4:30 PM (Tea & Prime Adda)">4:30 PM (Tea & Prime Adda)</option>
+              <option value="6:00 PM (Evening Rush)" selected>6:00 PM (Evening Rush)</option>
+              <option value="7:30 PM (Dinner & Snacks)">7:30 PM (Dinner & Snacks)</option>
+              <option value="9:00 PM (Late Night Bites)">9:00 PM (Late Night Bites)</option>
+            </select>
+          </div>
+
+        </div>
+
+        <!-- Special Request Notes -->
+        <div class="space-y-1.5">
+          <label for="book-notes" class="block font-display font-extrabold text-sm text-pop-black">
+            Special Requests / Birthday Celebrations / Seating Preference
+          </label>
+          <textarea 
+            id="book-notes" 
+            rows="2" 
+            placeholder="e.g., Birthday decor, need cozy corner with laptop charging port, extra cheese..." 
+            class="w-full px-4 py-2.5 bg-pop-cream border-2 border-pop-black rounded-xl font-semibold text-sm focus:outline-none focus:ring-2 focus:ring-pop-yellow"
+          ></textarea>
+        </div>
+
+        <!-- Submit Button -->
+        <div class="pt-2 flex flex-col sm:flex-row items-center justify-between gap-4">
+          <div class="text-xs font-bold text-gray-600 flex items-center gap-1.5">
+            <i data-lucide="shield-check" class="w-4 h-4 text-emerald-600"></i>
+            <span>Instant confirmation directly on WhatsApp with our manager.</span>
+          </div>
+          <button 
+            type="submit" 
+            class="w-full sm:w-auto px-8 py-4 bg-pop-lime text-pop-black font-display font-black text-base border-3 border-pop-black rounded-2xl shadow-brutal hover:bg-lime-400 btn-brutal inline-flex items-center justify-center gap-2"
+          >
+            <i data-lucide="calendar-check" class="w-5 h-5"></i>
+            <span>Confirm Booking on WhatsApp</span>
+          </button>
+        </div>
+
+      </form>
+
+    </div>
+  </section>
+
+  <!-- LOCATION & HOW TO REACH (HAZRA RD, BHOWANIPORE) -->
+  <section id="location" class="py-16 px-4 sm:px-8 bg-pop-butter border-t-4 border-pop-black">
+    <div class="max-w-7xl mx-auto space-y-10">
+      
+      <div class="text-center space-y-2 max-w-2xl mx-auto">
+        <span class="px-3.5 py-1 bg-pop-cyan text-pop-black border-2 border-pop-black rounded-full font-display font-black text-xs uppercase shadow-brutal-sm">
+          📍 Easy to Reach
+        </span>
+        <h2 class="font-display font-black text-3xl sm:text-5xl text-pop-black">
+          Find Us on Hazra Road
+        </h2>
+        <p class="text-base sm:text-lg font-semibold text-gray-800">
+          Right opposite Patuapara and barely 2 minutes from Jatin Das Park Metro Station.
+        </p>
+      </div>
+
+      <!-- Grid: Details & Map -->
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
+        
+        <!-- Address & Transit Info Box -->
+        <div class="lg:col-span-5 bg-white border-4 border-pop-black rounded-3xl p-6 sm:p-8 shadow-brutal-xl space-y-6">
+          
+          <div class="space-y-2">
+            <span class="text-xs font-black text-pop-pink uppercase tracking-widest">
+              OFFICIAL CAFE ADDRESS
+            </span>
+            <h3 class="font-display font-black text-2xl text-pop-black">
+              The Cafeteria
+            </h3>
+            <p class="text-sm font-bold text-gray-800 leading-relaxed">
+              Shop No. 4, 128, Hazra Rd, Jatin Das Park, Patuapara, Bhowanipore, Kolkata, West Bengal 700026
+            </p>
+          </div>
+
+          <!-- Landmarks List -->
+          <div class="space-y-3 pt-2 border-t-2 border-gray-100">
+            <div class="flex items-start gap-3">
+              <div class="w-8 h-8 rounded-xl bg-pop-yellow border-2 border-pop-black flex items-center justify-center font-bold text-sm shrink-0">
+                🚇
+              </div>
+              <div class="text-xs font-semibold">
+                <strong class="font-black text-pop-black block text-sm">Metro Station:</strong>
+                2-minute walk from <strong>Jatin Das Park Metro Station</strong> (Gate 2/3).
+              </div>
+            </div>
+
+            <div class="flex items-start gap-3">
+              <div class="w-8 h-8 rounded-xl bg-pop-cyan border-2 border-pop-black flex items-center justify-center font-bold text-sm shrink-0">
+                🏛️
+              </div>
+              <div class="text-xs font-semibold">
+                <strong class="font-black text-pop-black block text-sm">Prominent Landmark:</strong>
+                Patuapara Hazra crossing, right near Ashutosh College & Bhowanipore police station vicinity.
+              </div>
+            </div>
+
+            <div class="flex items-start gap-3">
+              <div class="w-8 h-8 rounded-xl bg-pop-lime border-2 border-pop-black flex items-center justify-center font-bold text-sm shrink-0">
+                📞
+              </div>
+              <div class="text-xs font-semibold">
+                <strong class="font-black text-pop-black block text-sm">Direct Phone Call:</strong>
+                <a href="tel:06289974613" class="text-pop-orange font-black underline">+91 62899 74613</a> (Call anytime for directions)
+              </div>
+            </div>
+          </div>
+
+          <!-- Action Buttons -->
+          <div class="pt-2 flex flex-col sm:flex-row gap-3">
+            <a 
+              href="https://maps.app.goo.gl/q4FdHGBXpMu4Ccby7" 
+              target="_blank" 
+              rel="noopener noreferrer" 
+              class="flex-1 py-3 px-4 bg-pop-orange text-white font-display font-black text-sm text-center border-3 border-pop-black rounded-xl shadow-brutal hover:bg-orange-600 btn-brutal inline-flex items-center justify-center gap-2"
+            >
+              <i data-lucide="navigation" class="w-4 h-4"></i>
+              <span>Get Directions</span>
+            </a>
+            <a 
+              href="tel:06289974613" 
+              class="py-3 px-4 bg-pop-yellow text-pop-black font-display font-black text-sm text-center border-3 border-pop-black rounded-xl shadow-brutal hover:bg-yellow-300 btn-brutal inline-flex items-center justify-center gap-2"
+            >
+              <i data-lucide="phone-call" class="w-4 h-4"></i>
+              <span>Call Café</span>
+            </a>
+          </div>
+
+        </div>
+
+        <!-- Google Maps Interactive Iframe Box -->
+        <div class="lg:col-span-7 bg-white border-4 border-pop-black rounded-3xl p-3 shadow-brutal-xl">
+          <div class="relative w-full aspect-[16/10] sm:aspect-[16/9] rounded-2xl overflow-hidden border-2 border-pop-black bg-gray-100">
+            <!-- Google Maps Embed for Hazra Road, Jatin Das Park, Kolkata -->
+            <iframe 
+              title="The Cafeteria Hazra Road Kolkata Location Map" 
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3685.2536968038753!2d88.34444587600868!3d22.517594979532585!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a02773a4b087a09%3A0x6b4dcab68eef4cf6!2s128%2C%20Hazra%20Rd%2C%20Patuapara%2C%20Bhowanipore%2C%20Kolkata%2C%20West%20Bengal%20700026!5e0!3m2!1sen!2sin!4v1700000000000!5m2!1sen!2sin" 
+              width="100%" 
+              height="100%" 
+              style="border:0;" 
+              allowfullscreen="" 
+              loading="lazy" 
+              referrerpolicy="no-referrer-when-downgrade"
+            ></iframe>
+            
+            <!-- Floating Map Badge -->
+            <div class="absolute top-3 left-3 bg-white/95 backdrop-blur-sm border-2 border-pop-black px-3 py-1.5 rounded-xl shadow-brutal-sm flex items-center gap-2 text-xs font-black">
+              <span class="w-2.5 h-2.5 rounded-full bg-pop-pink animate-ping"></span>
+              <span>Shop No. 4, 128 Hazra Rd</span>
+            </div>
+          </div>
+          
+          <div class="mt-3 px-2 flex items-center justify-between text-xs font-bold text-gray-700">
+            <span>Click map to interact or zoom</span>
+            <a href="https://maps.app.goo.gl/q4FdHGBXpMu4Ccby7" target="_blank" rel="noopener noreferrer" class="text-pop-pink hover:underline">
+              Open in Google Maps App ↗
+            </a>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- QUICK ORDER CART SLIDE-IN DRAWER (MODAL) -->
+  <div id="cart-drawer" class="fixed inset-0 z-50 overflow-hidden hidden transition-opacity">
+    <!-- Backdrop -->
+    <div onclick="toggleCartDrawer(false)" class="absolute inset-0 bg-pop-black/60 backdrop-blur-xs transition-opacity"></div>
+    
+    <div class="fixed inset-y-0 right-0 max-w-full flex pl-10">
+      <div class="w-screen max-w-md bg-pop-cream border-l-4 border-pop-black shadow-2xl flex flex-col">
+        
+        <!-- Drawer Header -->
+        <div class="p-5 bg-pop-yellow border-b-4 border-pop-black flex items-center justify-between">
+          <div class="flex items-center gap-2">
+            <div class="w-9 h-9 rounded-xl bg-pop-pink text-white border-2 border-pop-black flex items-center justify-center font-bold">
+              🛒
+            </div>
+            <div>
+              <h3 class="font-display font-black text-xl text-pop-black leading-none">Your Adda Cart</h3>
+              <p class="text-xs font-bold text-pop-black/80 mt-0.5">Quick order to WhatsApp</p>
+            </div>
+          </div>
+          <button onclick="toggleCartDrawer(false)" class="p-1.5 bg-white border-2 border-pop-black rounded-lg hover:bg-pop-orange hover:text-white transition-colors" aria-label="Close cart">
+            <i data-lucide="x" class="w-5 h-5"></i>
+          </button>
+        </div>
+
+        <!-- Items Container -->
+        <div id="cart-items-list" class="flex-1 overflow-y-auto p-5 space-y-3">
+          <!-- Rendered via JS -->
+        </div>
+
+        <!-- Drawer Footer & Order Trigger -->
+        <div class="p-5 bg-white border-t-4 border-pop-black space-y-4">
+          
+          <!-- Order Type Selector -->
+          <div class="space-y-1">
+            <label class="text-xs font-black text-pop-black block">Order Type:</label>
+            <div class="grid grid-cols-2 gap-2 text-xs font-bold">
+              <button type="button" onclick="setCartOrderType('Dine-in (At Café)')" id="order-type-dinein" class="py-2 px-3 border-2 border-pop-black rounded-xl bg-pop-yellow text-pop-black font-extrabold shadow-brutal-sm">
+                🍽️ Dine-in
+              </button>
+              <button type="button" onclick="setCartOrderType('Takeaway / Pickup')" id="order-type-takeaway" class="py-2 px-3 border-2 border-pop-black rounded-xl bg-white text-gray-700">
+                🥡 Takeaway
+              </button>
+            </div>
+          </div>
+
+          <!-- Customer Name for Order -->
+          <div>
+            <input 
+              type="text" 
+              id="cart-customer-name" 
+              placeholder="Your Name (Optional)" 
+              class="w-full px-3 py-2 text-xs font-bold bg-pop-cream border-2 border-pop-black rounded-xl focus:outline-none"
+            />
+          </div>
+
+          <!-- Subtotal Summary -->
+          <div class="space-y-1 pt-1 border-t-2 border-gray-100 text-sm font-bold">
+            <div class="flex items-center justify-between text-gray-600">
+              <span>Items Total:</span>
+              <span id="cart-subtotal-price" class="font-extrabold text-pop-black">₹0</span>
+            </div>
+            <div class="flex items-center justify-between text-base font-black text-pop-black pt-1">
+              <span>Total Payable:</span>
+              <span id="cart-total-price" class="text-pop-pink font-display text-xl">₹0</span>
+            </div>
+          </div>
+
+          <!-- Send WhatsApp Order Button -->
+          <button 
+            onclick="sendCartWhatsAppOrder()" 
+            id="cart-checkout-btn" 
+            class="w-full py-3.5 bg-pop-lime text-pop-black font-display font-black text-base border-3 border-pop-black rounded-xl shadow-brutal hover:bg-lime-400 btn-brutal flex items-center justify-center gap-2"
+          >
+            <i data-lucide="message-circle" class="w-5 h-5"></i>
+            <span>Send Order via WhatsApp</span>
+          </button>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <!-- IMAGE LIGHTBOX MODAL -->
+  <div id="lightbox-modal" class="fixed inset-0 z-50 hidden bg-pop-black/85 backdrop-blur-sm flex items-center justify-center p-4">
+    <div class="relative max-w-4xl w-full bg-white border-4 border-pop-black rounded-3xl p-4 shadow-2xl">
+      <button onclick="closeLightbox()" class="absolute -top-3 -right-3 w-10 h-10 bg-pop-pink text-white border-2 border-pop-black rounded-full font-black flex items-center justify-center shadow-brutal hover:scale-110 transition-transform">
+        ✕
+      </button>
+      <div class="rounded-2xl overflow-hidden border-2 border-pop-black aspect-[16/10] bg-pop-butter">
+        <img id="lightbox-img" src="" alt="The Cafeteria Zoomed View" class="w-full h-full object-cover" />
+      </div>
+      <div class="mt-4 px-2 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-3">
+        <div>
+          <h3 id="lightbox-title" class="font-display font-black text-xl text-pop-black"></h3>
+          <p id="lightbox-desc" class="text-xs font-semibold text-gray-700"></p>
+        </div>
+        <a id="lightbox-whatsapp" href="https://wa.me/916289974613" target="_blank" rel="noopener noreferrer" class="px-4 py-2 bg-pop-lime text-pop-black font-display font-extrabold text-xs border-2 border-pop-black rounded-xl shadow-brutal-sm hover:bg-lime-400 inline-flex items-center gap-1.5 shrink-0">
+          <i data-lucide="message-circle" class="w-4 h-4"></i>
+          <span>Ask About This Item</span>
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- TOAST NOTIFICATION CONTAINER -->
+  <div id="toast" class="fixed bottom-24 md:bottom-6 right-6 z-50 hidden bg-pop-black text-white font-display font-bold text-sm px-4 py-3 rounded-2xl border-2 border-pop-yellow shadow-brutal-lg flex items-center gap-3 transition-transform">
+    <span id="toast-icon">✨</span>
+    <span id="toast-message">Item added to cart!</span>
+  </div>
+
+  <!-- STICKY MOBILE BOTTOM BAR (MOBILE FIRST COMPLIANT) -->
+  <div class="lg:hidden fixed bottom-0 inset-x-0 z-40 bg-white border-t-4 border-pop-black px-4 py-2.5 shadow-2xl flex items-center justify-between gap-2.5">
+    
+    <a href="tel:06289974613" class="flex-1 py-2.5 px-3 bg-pop-cyan text-pop-black font-display font-extrabold text-xs sm:text-sm border-2 border-pop-black rounded-xl shadow-brutal-sm flex items-center justify-center gap-1.5 active:translate-y-0.5">
+      <i data-lucide="phone-call" class="w-4 h-4"></i>
+      <span>Call Café</span>
+    </a>
+
+    <a href="https://wa.me/916289974613?text=Hey%20The%20Cafeteria!%20I%20would%20like%20to%20place%20an%20order." target="_blank" rel="noopener noreferrer" class="flex-1 py-2.5 px-3 bg-pop-lime text-pop-black font-display font-extrabold text-xs sm:text-sm border-2 border-pop-black rounded-xl shadow-brutal-sm flex items-center justify-center gap-1.5 active:translate-y-0.5">
+      <i data-lucide="message-circle" class="w-4 h-4"></i>
+      <span>WhatsApp</span>
+    </a>
+
+    <button onclick="toggleCartDrawer(true)" class="relative py-2.5 px-3.5 bg-pop-yellow text-pop-black font-display font-extrabold text-xs border-2 border-pop-black rounded-xl shadow-brutal-sm flex items-center justify-center gap-1.5 active:translate-y-0.5">
+      <i data-lucide="shopping-bag" class="w-4 h-4"></i>
+      <span id="mobile-cart-badge" class="bg-pop-pink text-white text-[10px] w-4 h-4 rounded-full flex items-center justify-center font-black">
+        0
+      </span>
+    </button>
+
+  </div>
+
+  <!-- FOOTER -->
+  <footer class="bg-pop-black text-white border-t-4 border-pop-black pt-14 pb-24 md:pb-12 px-4 sm:px-8">
+    <div class="max-w-7xl mx-auto space-y-12">
+      
+      <div class="grid grid-cols-1 md:grid-cols-12 gap-8 items-start">
+        
+        <!-- Brand Summary -->
+        <div class="md:col-span-5 space-y-4">
+          <div class="flex items-center gap-2">
+            <div class="w-10 h-10 bg-pop-orange border-2 border-white rounded-xl flex items-center justify-center font-retro text-white text-xl">
+              TC
+            </div>
+            <span class="font-display font-black text-2xl text-white tracking-tight">
+              THE CAFETERIA
+            </span>
+          </div>
+          <p class="text-sm text-gray-300 font-medium max-w-sm leading-relaxed">
+            Sips, Bites & Good Vibes in the Heart of South Kolkata. The go-to neighborhood hangout for college students, coffee enthusiasts, and food lovers on Hazra Road.
+          </p>
+          <div class="flex items-center gap-3 pt-2">
+            <a href="https://wa.me/916289974613" target="_blank" rel="noopener noreferrer" class="w-10 h-10 rounded-xl bg-pop-lime text-pop-black border-2 border-white flex items-center justify-center font-bold hover:scale-110 transition-transform" aria-label="WhatsApp">
+              <i data-lucide="message-circle" class="w-5 h-5"></i>
+            </a>
+            <a href="tel:06289974613" class="w-10 h-10 rounded-xl bg-pop-cyan text-pop-black border-2 border-white flex items-center justify-center font-bold hover:scale-110 transition-transform" aria-label="Phone">
+              <i data-lucide="phone" class="w-5 h-5"></i>
+            </a>
+            <a href="https://maps.app.goo.gl/q4FdHGBXpMu4Ccby7" target="_blank" rel="noopener noreferrer" class="w-10 h-10 rounded-xl bg-pop-yellow text-pop-black border-2 border-white flex items-center justify-center font-bold hover:scale-110 transition-transform" aria-label="Google Maps Location">
+              <i data-lucide="map-pin" class="w-5 h-5"></i>
+            </a>
+          </div>
+        </div>
+
+        <!-- Quick Links -->
+        <div class="md:col-span-3 space-y-3 font-semibold text-sm text-gray-300">
+          <div class="font-display font-black text-base text-pop-yellow uppercase tracking-wider">
+            Explore
+          </div>
+          <ul class="space-y-2">
+            <li><a href="#hero" class="hover:text-pop-lime transition-colors">Home</a></li>
+            <li><a href="#menu" class="hover:text-pop-lime transition-colors">Food & Drink Menu</a></li>
+            <li><a href="#gallery" class="hover:text-pop-lime transition-colors">Vibe Gallery</a></li>
+            <li><a href="#reviews" class="hover:text-pop-lime transition-colors">Adda Testimonials</a></li>
+            <li><a href="#timings" class="hover:text-pop-lime transition-colors">Operating Hours</a></li>
+            <li><a href="#booking" class="hover:text-pop-lime transition-colors">Table Booking</a></li>
+            <li><a href="#location" class="hover:text-pop-lime transition-colors">Location & Directions</a></li>
+          </ul>
+        </div>
+
+        <!-- Contact & Timings Brief -->
+        <div class="md:col-span-4 space-y-3 text-sm text-gray-300 font-medium">
+          <div class="font-display font-black text-base text-pop-pink uppercase tracking-wider">
+            Visit & Contact
+          </div>
+          <div class="space-y-2">
+            <p>
+              <strong class="text-white block font-bold">Address:</strong>
+              Shop No. 4, 128, Hazra Rd, Jatin Das Park, Patuapara, Bhowanipore, Kolkata, WB 700026
+            </p>
+            <p>
+              <strong class="text-white block font-bold">Direct Phone:</strong>
+              <a href="tel:06289974613" class="text-pop-lime font-bold hover:underline">+91 62899 74613</a>
+            </p>
+            <p>
+              <strong class="text-white block font-bold">Hours:</strong>
+              Mon-Sat: 12:00 PM – 10:00 PM<br/>
+              Sunday: 4:00 PM – 10:00 PM (Evening Special)
+            </p>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Copyright & Signoff -->
+      <div class="pt-8 border-t border-gray-800 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs font-semibold text-gray-400">
+        <p>© 2026 The Cafeteria, Kolkata. All rights reserved.</p>
+        <div class="flex items-center gap-2">
+          <span>Brewed with</span>
+          <span class="text-pop-pink">❤️</span>
+          <span>& pure good vibes in South Kolkata</span>
+        </div>
+      </div>
+
+    </div>
+  </footer>
+
+  <!-- VANILLA JAVASCRIPT APPLICATION LOGIC -->
+  <script>
+    // --- MENU DATABASE ---
+    const menuItems = [
+      // 1. Artisan Brews & Coolers
+      {
+        id: 'brew-1',
+        category: 'brews',
+        name: 'Cold Coffee with Ice Cream',
+        price: 129,
+        diet: 'veg',
+        badge: 'Bestseller',
+        badgeColor: 'bg-pop-pink text-white',
+        desc: 'Rich handcrafted espresso blended with creamy vanilla ice cream and dark chocolate drizzle.',
+        image: '/src/assets/images/cafe_cold_coffee_dessert_1794381216077.jpg',
+        icon: 'coffee'
+      },
+      {
+        id: 'brew-2',
+        category: 'brews',
+        name: 'Hazelnut Frappe',
+        price: 149,
+        diet: 'veg',
+        badge: 'Popular',
+        badgeColor: 'bg-pop-yellow text-pop-black',
+        desc: 'Chilled hazelnut roasted brew topped with whipped crown and crushed cocoa sprinkles.',
+        image: '/src/assets/images/cafe_food_spread_1794381215970.jpg',
+        icon: 'coffee'
+      },
+      {
+        id: 'brew-3',
+        category: 'brews',
+        name: 'Classic Cappuccino',
+        price: 99,
+        diet: 'veg',
+        badge: 'Hot Pick',
+        badgeColor: 'bg-pop-cyan text-pop-black',
+        desc: 'Steamed velvety microfoam layered on top of double shot rich dark roast espresso.',
+        image: '/src/assets/images/hero_cafe_vibe_1794381214710.jpg',
+        icon: 'coffee'
+      },
+      {
+        id: 'brew-4',
+        category: 'brews',
+        name: 'Blue Lagoon Mocktail',
+        price: 119,
+        diet: 'veg',
+        badge: 'Chilled',
+        badgeColor: 'bg-pop-cyan text-pop-black',
+        desc: 'Refreshing curacao citrus punch with sparkling lemon cooler, crushed ice and fresh mint leaves.',
+        image: '/src/assets/images/cafe_food_spread_1794381215970.jpg',
+        icon: 'glass-water'
+      },
+      {
+        id: 'brew-5',
+        category: 'brews',
+        name: 'Peach Iced Tea',
+        price: 109,
+        diet: 'veg',
+        badge: 'Summer Fav',
+        badgeColor: 'bg-pop-orange text-white',
+        desc: 'Crisp steeped tea infused with juicy peach nectar, lemon slice and aromatic herbs.',
+        image: '/src/assets/images/cafe_food_spread_1794381215970.jpg',
+        icon: 'cup-soda'
+      },
+
+      // 2. Burgers & Sandwiches
+      {
+        id: 'burger-1',
+        category: 'burgers',
+        name: 'Double Cheese Chicken Burger',
+        price: 189,
+        diet: 'nonveg',
+        badge: 'Must Try',
+        badgeColor: 'bg-pop-lime text-pop-black',
+        desc: 'Juicy grilled chicken patty, double melted cheddar, caramelized onions and secret house garlic mayo.',
+        image: '/src/assets/images/cafe_food_spread_1794381215970.jpg',
+        icon: 'sandwich'
+      },
+      {
+        id: 'burger-2',
+        category: 'burgers',
+        name: 'Crispy Veg Loaded Burger',
+        price: 139,
+        diet: 'veg',
+        badge: 'Crunchy',
+        badgeColor: 'bg-pop-yellow text-pop-black',
+        desc: 'Golden spiced potato & corn patty, crunchy iceberg lettuce, pickled gherkins and smoky tandoori dip.',
+        image: '/src/assets/images/cafe_food_spread_1794381215970.jpg',
+        icon: 'sandwich'
+      },
+      {
+        id: 'burger-3',
+        category: 'burgers',
+        name: 'Grilled Club Sandwich',
+        price: 159,
+        diet: 'nonveg',
+        badge: 'Classic',
+        badgeColor: 'bg-pop-cyan text-pop-black',
+        desc: 'Triple-layer toasted artisan sandwich filled with smoked chicken, boiled egg slices and molten cheese.',
+        image: '/src/assets/images/hero_cafe_vibe_1794381214710.jpg',
+        icon: 'sandwich'
+      },
+      {
+        id: 'burger-4',
+        category: 'burgers',
+        name: 'Paneer Tikka Panini',
+        price: 149,
+        diet: 'veg',
+        badge: 'Spicy Veg',
+        badgeColor: 'bg-pop-orange text-white',
+        desc: 'Marinated roasted cottage cheese cubes pressed in crusty ciabatta with mint chutney & mozzarella.',
+        image: '/src/assets/images/cafe_food_spread_1794381215970.jpg',
+        icon: 'sandwich'
+      },
+
+      // 3. Quick Munchies & Finger Food
+      {
+        id: 'munch-1',
+        category: 'munchies',
+        name: 'Peri-Peri French Fries',
+        price: 119,
+        diet: 'veg',
+        badge: 'Adda Special',
+        badgeColor: 'bg-pop-pink text-white',
+        desc: 'Crispy golden potato fries vigorously tossed in fiery African peri-peri spices with cheesy garlic dip.',
+        image: '/src/assets/images/cafe_food_spread_1794381215970.jpg',
+        icon: 'utensils'
+      },
+      {
+        id: 'munch-2',
+        category: 'munchies',
+        name: 'Cheesy Garlic Bread',
+        price: 139,
+        diet: 'veg',
+        badge: 'Cheesy',
+        badgeColor: 'bg-pop-yellow text-pop-black',
+        desc: 'Freshly baked baguette slices generously loaded with garlic herb butter and bubbling mozzarella.',
+        image: '/src/assets/images/cafe_food_spread_1794381215970.jpg',
+        icon: 'bread'
+      },
+      {
+        id: 'munch-3',
+        category: 'munchies',
+        name: 'Crispy Chicken Strips',
+        price: 179,
+        diet: 'nonveg',
+        badge: 'Crispy',
+        badgeColor: 'bg-pop-lime text-pop-black',
+        desc: 'Tender chicken breast goujons coated in panko breadcrumbs, deep fried with sweet chili sauce.',
+        image: '/src/assets/images/cafe_food_spread_1794381215970.jpg',
+        icon: 'drumstick'
+      },
+      {
+        id: 'munch-4',
+        category: 'munchies',
+        name: 'BBQ Wings (6 Pcs)',
+        price: 199,
+        diet: 'nonveg',
+        badge: 'Smoky',
+        badgeColor: 'bg-pop-orange text-white',
+        desc: 'Tender chicken wings slow tossed in rich hickory smoked barbecue glaze with roasted sesame.',
+        image: '/src/assets/images/cafe_food_spread_1794381215970.jpg',
+        icon: 'flame'
+      },
+      {
+        id: 'munch-5',
+        category: 'munchies',
+        name: 'Nachos Overloaded',
+        price: 169,
+        diet: 'veg',
+        badge: 'Sharing',
+        badgeColor: 'bg-pop-yellow text-pop-black',
+        desc: 'Crunchy Mexican corn chips drenched in hot cheese sauce, fresh pico de gallo, salsa and jalapenos.',
+        image: '/src/assets/images/cafe_food_spread_1794381215970.jpg',
+        icon: 'utensils'
+      },
+
+      // 4. Pizzas & Pastas
+      {
+        id: 'pizza-1',
+        category: 'pizzas',
+        name: 'Thin Crust Margherita',
+        price: 199,
+        diet: 'veg',
+        badge: 'Italian',
+        badgeColor: 'bg-pop-lime text-pop-black',
+        desc: 'Hand-stretched thin crust stone baked with San Marzano tomato sauce, fresh basil and pure mozzarella.',
+        image: '/src/assets/images/cafe_food_spread_1794381215970.jpg',
+        icon: 'pizza'
+      },
+      {
+        id: 'pizza-2',
+        category: 'pizzas',
+        name: 'Spicy Peri-Peri Chicken Pizza',
+        price: 259,
+        diet: 'nonveg',
+        badge: 'Chef Special',
+        badgeColor: 'bg-pop-pink text-white',
+        desc: 'Crispy thin crust topped with spicy peri-peri chicken chunks, red paprika, bell peppers and molten cheese.',
+        image: '/src/assets/images/cafe_food_spread_1794381215970.jpg',
+        icon: 'pizza'
+      },
+      {
+        id: 'pizza-3',
+        category: 'pizzas',
+        name: 'Creamy White Sauce Penne',
+        price: 189,
+        diet: 'veg',
+        badge: 'Velvety',
+        badgeColor: 'bg-pop-yellow text-pop-black',
+        desc: 'Al dente penne pasta tossed in rich parmesan Alfredo garlic sauce with mushrooms and Italian herbs.',
+        image: '/src/assets/images/hero_cafe_vibe_1794381214710.jpg',
+        icon: 'utensils'
+      },
+      {
+        id: 'pizza-4',
+        category: 'pizzas',
+        name: 'Tangy Arrabbiata Pasta',
+        price: 179,
+        diet: 'veg',
+        badge: 'Fiery',
+        badgeColor: 'bg-pop-orange text-white',
+        desc: 'Spicy crushed red tomato marinara with chili flakes, kalamata black olives, garlic and basil leaves.',
+        image: '/src/assets/images/hero_cafe_vibe_1794381214710.jpg',
+        icon: 'utensils'
+      },
+
+      // 5. Desserts & Shakes
+      {
+        id: 'dessert-1',
+        category: 'desserts',
+        name: 'Belgian Chocolate Shake',
+        price: 159,
+        diet: 'veg',
+        badge: 'Rich',
+        badgeColor: 'bg-pop-pink text-white',
+        desc: 'Ultra-thick gourmet chocolate shake made with dark Belgian cocoa, fudge swirls and choco chips.',
+        image: '/src/assets/images/cafe_cold_coffee_dessert_1794381216077.jpg',
+        icon: 'ice-cream'
+      },
+      {
+        id: 'dessert-2',
+        category: 'desserts',
+        name: 'Oreo Mudslide Shake',
+        price: 149,
+        diet: 'veg',
+        badge: 'Kid & Youth Fav',
+        badgeColor: 'bg-pop-cyan text-pop-black',
+        desc: 'Crushed Oreo cookies blended with creamy vanilla ice cream, topped with cookie crumble & chocolate sauce.',
+        image: '/src/assets/images/cafe_cold_coffee_dessert_1794381216077.jpg',
+        icon: 'cup-soda'
+      },
+      {
+        id: 'dessert-3',
+        category: 'desserts',
+        name: 'Sizzling Brownie with Ice Cream',
+        price: 139,
+        diet: 'veg',
+        badge: 'Heavenly',
+        badgeColor: 'bg-pop-yellow text-pop-black',
+        desc: 'Warm walnut chocolate fudge brownie paired with a scoop of cold vanilla bean ice cream.',
+        image: '/src/assets/images/cafe_cold_coffee_dessert_1794381216077.jpg',
+        icon: 'cake'
+      },
+      {
+        id: 'dessert-4',
+        category: 'desserts',
+        name: 'Belgian Waffle Sundae',
+        price: 169,
+        diet: 'veg',
+        badge: 'Decadent',
+        badgeColor: 'bg-pop-lime text-pop-black',
+        desc: 'Freshly baked golden waffle loaded with twin scoops of ice cream, strawberry coulis and chocolate fudge.',
+        image: '/src/assets/images/cafe_cold_coffee_dessert_1794381216077.jpg',
+        icon: 'ice-cream'
+      }
+    ];
+
+    // State Variables
+    let currentCategory = 'all';
+    let currentDiet = 'all';
+    let searchKeyword = '';
+    let cart = [];
+    let orderType = 'Dine-in (At Café)';
+
+    // --- RENDER MENU ITEMS ---
+    function renderMenu() {
+      const grid = document.getElementById('menu-grid');
+      if (!grid) return;
+
+      const filtered = menuItems.filter(item => {
+        const matchesCategory = currentCategory === 'all' || item.category === currentCategory;
+        const matchesDiet = currentDiet === 'all' || item.diet === currentDiet;
+        const matchesSearch = !searchKeyword || 
+          item.name.toLowerCase().includes(searchKeyword.toLowerCase()) || 
+          item.desc.toLowerCase().includes(searchKeyword.toLowerCase());
+        return matchesCategory && matchesDiet && matchesSearch;
+      });
+
+      if (filtered.length === 0) {
+        grid.innerHTML = `
+          <div class="col-span-full py-12 text-center bg-white border-3 border-pop-black rounded-3xl p-8 shadow-brutal space-y-3">
+            <span class="text-4xl">🔍🍔</span>
+            <h3 class="font-display font-black text-2xl text-pop-black">No snacks found matching your search!</h3>
+            <p class="text-sm font-semibold text-gray-600">Try clearing your search query or switching category filter.</p>
+            <button onclick="resetFilters()" class="px-5 py-2.5 bg-pop-yellow border-2 border-pop-black font-extrabold text-sm rounded-xl shadow-brutal-sm hover:bg-yellow-300">
+              Show Full Menu
+            </button>
+          </div>
+        `;
+        return;
+      }
+
+      grid.innerHTML = filtered.map(item => {
+        const isVeg = item.diet === 'veg';
+        const itemInCart = cart.find(c => c.id === item.id);
+        const qtyInCart = itemInCart ? itemInCart.qty : 0;
+
+        // WhatsApp direct order URL for this item
+        const waText = encodeURIComponent(`Hey The Cafeteria! I want to order 1x ${item.name} (₹${item.price}). Is it available right now?`);
+        const itemWaUrl = `https://wa.me/916289974613?text=${waText}`;
+
+        return `
+          <div class="bg-white border-4 border-pop-black rounded-3xl p-4 shadow-brutal hover:shadow-brutal-lg transition-all flex flex-col justify-between group">
+            <div class="space-y-3">
+              <!-- Item Image & Badges -->
+              <div class="relative overflow-hidden rounded-2xl border-2 border-pop-black aspect-[16/10] bg-pop-butter">
+                <img 
+                  src="${item.image}" 
+                  alt="${item.name}" 
+                  class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                  loading="lazy"
+                  onerror="this.onerror=null; this.src='data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\' width=\'600\' height=\'400\' viewBox=\'0 0 600 400\'><rect width=\'600\' height=\'400\' fill=\'%23FEF08A\'/><circle cx=\'300\' cy=\'180\' r=\'75\' fill=\'%23FF3B88\'/><text x=\'300\' y=\'195\' font-size=\'48\' text-anchor=\'middle\'>🍔🍟</text><text x=\'300\' y=\'320\' font-family=\'sans-serif\' font-weight=\'800\' font-size=\'20\' fill=\'%23111827\' text-anchor=\'middle\'>THE CAFETERIA BITES</text></svg>';"
+                />
+                
+                <!-- Diet & Category Badges -->
+                <div class="absolute top-2.5 left-2.5 flex items-center gap-1.5">
+                  <span class="w-6 h-6 rounded-md bg-white border-2 border-pop-black flex items-center justify-center shadow-sm" title="${isVeg ? 'Vegetarian' : 'Non-Vegetarian'}">
+                    <span class="w-2.5 h-2.5 rounded-full ${isVeg ? 'bg-emerald-600' : 'bg-red-600'}"></span>
+                  </span>
+                  <span class="px-2 py-0.5 rounded-lg border-2 border-pop-black font-extrabold text-[11px] shadow-sm ${item.badgeColor}">
+                    ${item.badge}
+                  </span>
+                </div>
+
+                <!-- Price Pill Tag -->
+                <div class="absolute bottom-2.5 right-2.5 px-3 py-1 bg-pop-yellow text-pop-black font-display font-black text-base rounded-xl border-2 border-pop-black shadow-brutal-sm">
+                  ₹${item.price}
+                </div>
+              </div>
+
+              <!-- Item Details -->
+              <div class="space-y-1">
+                <h3 class="font-display font-black text-xl text-pop-black leading-snug">
+                  ${item.name}
+                </h3>
+                <p class="text-xs font-medium text-gray-700 line-clamp-2 leading-relaxed">
+                  ${item.desc}
+                </p>
+              </div>
+            </div>
+
+            <!-- Card Bottom Actions -->
+            <div class="pt-4 border-t-2 border-gray-100 flex items-center gap-2 mt-3">
+              <!-- Add to Cart Button -->
+              <button 
+                onclick="addToCart('${item.id}')" 
+                class="flex-1 py-2.5 px-3 bg-pop-yellow text-pop-black font-display font-extrabold text-xs sm:text-sm border-2 border-pop-black rounded-xl shadow-brutal-sm hover:bg-yellow-300 btn-brutal flex items-center justify-center gap-1.5"
+              >
+                <i data-lucide="plus-circle" class="w-4 h-4"></i>
+                <span>${qtyInCart > 0 ? `In Cart (${qtyInCart})` : 'Add to Cart'}</span>
+              </button>
+
+              <!-- Instant WhatsApp Order Button -->
+              <a 
+                href="${itemWaUrl}" 
+                target="_blank" 
+                rel="noopener noreferrer" 
+                class="p-2.5 bg-pop-lime text-pop-black border-2 border-pop-black rounded-xl shadow-brutal-sm hover:bg-lime-400 btn-brutal flex items-center justify-center"
+                title="Order this item directly on WhatsApp"
+              >
+                <i data-lucide="message-circle" class="w-4 h-4"></i>
+              </a>
+            </div>
+          </div>
+        `;
+      }).join('');
+
+      // Refresh icons inside dynamically injected HTML
+      if (window.lucide) {
+        window.lucide.createIcons();
+      }
+    }
+
+    // Filter by Category
+    function filterMenu(cat) {
+      currentCategory = cat;
+      document.querySelectorAll('.menu-tab-btn').forEach(btn => {
+        if (btn.getAttribute('data-category') === cat) {
+          btn.classList.remove('bg-white', 'shadow-brutal-sm');
+          btn.classList.add('bg-pop-yellow', 'shadow-brutal', 'active');
+        } else {
+          btn.classList.remove('bg-pop-yellow', 'shadow-brutal', 'active');
+          btn.classList.add('bg-white', 'shadow-brutal-sm');
+        }
+      });
+      renderMenu();
+    }
+
+    // Filter by Diet (Veg / Non-Veg)
+    function toggleDietFilter(diet) {
+      currentDiet = diet;
+      document.querySelectorAll('.diet-btn').forEach(btn => {
+        btn.classList.remove('bg-pop-black', 'text-white');
+      });
+      const activeBtn = document.getElementById(`diet-${diet}-btn`);
+      if (activeBtn) {
+        activeBtn.classList.add('bg-pop-black', 'text-white');
+      }
+      renderMenu();
+    }
+
+    // Search Filter
+    function handleSearchMenu(val) {
+      searchKeyword = val.trim();
+      renderMenu();
+    }
+
+    // Reset All Filters
+    function resetFilters() {
+      currentCategory = 'all';
+      currentDiet = 'all';
+      searchKeyword = '';
+      const input = document.getElementById('menu-search-input');
+      if (input) input.value = '';
+      filterMenu('all');
+      toggleDietFilter('all');
+    }
+
+    // --- CART FUNCTIONALITY ---
+    function addToCart(itemId) {
+      const item = menuItems.find(i => i.id === itemId);
+      if (!item) return;
+
+      const existing = cart.find(c => c.id === itemId);
+      if (existing) {
+        existing.qty += 1;
+      } else {
+        cart.push({ ...item, qty: 1 });
+      }
+
+      updateCartUI();
+      renderMenu();
+      showToast(`🛒 Added "${item.name}" to cart!`);
+    }
+
+    function updateCartQty(itemId, delta) {
+      const item = cart.find(c => c.id === itemId);
+      if (!item) return;
+
+      item.qty += delta;
+      if (item.qty <= 0) {
+        cart = cart.filter(c => c.id !== itemId);
+      }
+
+      updateCartUI();
+      renderMenu();
+    }
+
+    function updateCartUI() {
+      const totalCount = cart.reduce((sum, item) => sum + item.qty, 0);
+      const subtotal = cart.reduce((sum, item) => sum + (item.price * item.qty), 0);
+
+      // Header Badges
+      const badgeCount = document.getElementById('cart-badge-count');
+      const mobileBadge = document.getElementById('mobile-cart-badge');
+      if (badgeCount) badgeCount.textContent = totalCount;
+      if (mobileBadge) mobileBadge.textContent = totalCount;
+
+      // Drawer Total Prices
+      const subtotalElem = document.getElementById('cart-subtotal-price');
+      const totalElem = document.getElementById('cart-total-price');
+      if (subtotalElem) subtotalElem.textContent = `₹${subtotal}`;
+      if (totalElem) totalElem.textContent = `₹${subtotal}`;
+
+      // Render items in drawer
+      const list = document.getElementById('cart-items-list');
+      if (!list) return;
+
+      if (cart.length === 0) {
+        list.innerHTML = `
+          <div class="h-64 flex flex-col items-center justify-center text-center space-y-3">
+            <div class="w-16 h-16 rounded-full bg-pop-butter border-2 border-pop-black flex items-center justify-center text-2xl shadow-brutal-sm">
+              🍔
+            </div>
+            <p class="font-display font-black text-lg text-pop-black">Your Cart is Empty!</p>
+            <p class="text-xs font-bold text-gray-500 max-w-xs">
+              Add some cheesy burgers, hot coffee, or crispy peri-peri fries to send your order!
+            </p>
+          </div>
+        `;
+        return;
+      }
+
+      list.innerHTML = cart.map(item => `
+        <div class="bg-white border-2 border-pop-black p-3 rounded-2xl shadow-brutal-sm flex items-center justify-between gap-3">
+          <div class="flex-1 min-w-0">
+            <h4 class="font-display font-extrabold text-sm text-pop-black truncate">${item.name}</h4>
+            <div class="text-xs font-bold text-pop-pink">₹${item.price} each • <span class="text-pop-black">₹${item.price * item.qty}</span></div>
+          </div>
+          <div class="flex items-center gap-2 bg-pop-cream border-2 border-pop-black rounded-xl p-1">
+            <button onclick="updateCartQty('${item.id}', -1)" class="w-6 h-6 rounded-lg bg-white border border-pop-black font-black text-xs flex items-center justify-center hover:bg-pop-orange hover:text-white transition-colors">
+              -
+            </button>
+            <span class="font-display font-black text-xs px-1">${item.qty}</span>
+            <button onclick="updateCartQty('${item.id}', 1)" class="w-6 h-6 rounded-lg bg-white border border-pop-black font-black text-xs flex items-center justify-center hover:bg-pop-lime transition-colors">
+              +
+            </button>
+          </div>
+        </div>
+      `).join('');
+    }
+
+    function toggleCartDrawer(open) {
+      const drawer = document.getElementById('cart-drawer');
+      if (!drawer) return;
+      if (open) {
+        updateCartUI();
+        drawer.classList.remove('hidden');
+        document.body.style.overflow = 'hidden';
+      } else {
+        drawer.classList.add('hidden');
+        document.body.style.overflow = '';
+      }
+    }
+
+    function setCartOrderType(type) {
+      orderType = type;
+      const dineinBtn = document.getElementById('order-type-dinein');
+      const takeawayBtn = document.getElementById('order-type-takeaway');
+      if (type.includes('Dine-in')) {
+        dineinBtn.className = "py-2 px-3 border-2 border-pop-black rounded-xl bg-pop-yellow text-pop-black font-extrabold shadow-brutal-sm";
+        takeawayBtn.className = "py-2 px-3 border-2 border-pop-black rounded-xl bg-white text-gray-700";
+      } else {
+        dineinBtn.className = "py-2 px-3 border-2 border-pop-black rounded-xl bg-white text-gray-700";
+        takeawayBtn.className = "py-2 px-3 border-2 border-pop-black rounded-xl bg-pop-yellow text-pop-black font-extrabold shadow-brutal-sm";
+      }
+    }
+
+    function sendCartWhatsAppOrder() {
+      if (cart.length === 0) {
+        alert("Please add items to your cart before sending an order!");
+        return;
+      }
+
+      const customerName = document.getElementById('cart-customer-name')?.value.trim() || 'A Foodie Friend';
+      const subtotal = cart.reduce((sum, item) => sum + (item.price * item.qty), 0);
+
+      let msg = `*NEW ORDER - THE CAFETERIA*\n`;
+      msg += `📍 Shop No. 4, 128 Hazra Rd, Kolkata\n`;
+      msg += `--------------------------\n`;
+      msg += `👤 Customer: ${customerName}\n`;
+      msg += `🍽️ Order Type: ${orderType}\n`;
+      msg += `--------------------------\n`;
+      msg += `*ITEMS ORDERED:*\n`;
+      cart.forEach((item, idx) => {
+        msg += `${idx + 1}. ${item.qty}x ${item.name} - ₹${item.price * item.qty}\n`;
+      });
+      msg += `--------------------------\n`;
+      msg += `💰 *TOTAL AMOUNT:* ₹${subtotal}\n`;
+      msg += `--------------------------\n`;
+      msg += `Please confirm preparation time & table availability! ✨`;
+
+      const waUrl = `https://wa.me/916289974613?text=${encodeURIComponent(msg)}`;
+      window.open(waUrl, '_blank');
+      toggleCartDrawer(false);
+      showToast("🚀 Order sent to WhatsApp!");
+    }
+
+    // --- LIVE TIMINGS & SCHEDULE CALCULATOR ---
+    function updateLiveStatus() {
+      // Kolkata is in IST (UTC +5:30)
+      const now = new Date();
+      // Calculate IST time
+      const utc = now.getTime() + (now.getTimezoneOffset() * 60000);
+      const istTime = new Date(utc + (3600000 * 5.5));
+
+      const dayOfWeek = istTime.getDay(); // 0 is Sunday, 1-6 Mon-Sat
+      const hours = istTime.getHours();
+      const minutes = istTime.getMinutes();
+      const decimalTime = hours + (minutes / 60);
+
+      // Formatted IST time string
+      const timeStr = istTime.toLocaleTimeString('en-US', { hour: '2-digit', minute: '2-digit', hour12: true });
+      const timeElem = document.getElementById('current-ist-time');
+      if (timeElem) timeElem.textContent = timeStr;
+
+      let isOpen = false;
+      let statusText = '';
+      let statusSub = '';
+
+      if (dayOfWeek === 0) {
+        // Sunday: 4:00 PM (16:00) to 10:00 PM (22:00)
+        if (decimalTime >= 16.0 && decimalTime < 22.0) {
+          isOpen = true;
+          statusText = "WE ARE OPEN RIGHT NOW! (SUNDAY SPECIAL ADDA)";
+          statusSub = "Open until 10:00 PM tonight. Drop by for burgers & shakes!";
+        } else if (decimalTime < 16.0) {
+          isOpen = false;
+          statusText = "OPENS TODAY AT 4:00 PM (SUNDAY SPECIAL EVENING)";
+          statusSub = "We open at 4:00 PM on Sundays for evening adda.";
+        } else {
+          isOpen = false;
+          statusText = "CLOSED FOR THE NIGHT (SEE YOU MON AT 12:00 PM)";
+          statusSub = "Resting our machines. Monday opens fresh at 12 PM.";
+        }
+      } else {
+        // Monday - Saturday: 12:00 PM (12.0) to 10:00 PM (22.0)
+        if (decimalTime >= 12.0 && decimalTime < 22.0) {
+          isOpen = true;
+          statusText = "WE ARE OPEN RIGHT NOW! COME ON IN";
+          statusSub = "Open until 10:00 PM. Hot coffee & sizzling bites ready!";
+        } else if (decimalTime < 12.0) {
+          isOpen = false;
+          statusText = "CURRENTLY RESTING (OPENS AT 12:00 PM TODAY)";
+          statusSub = "Prepping fresh patties & brewing beans. Opens at 12 PM.";
+        } else {
+          isOpen = false;
+          statusText = "CLOSED FOR THE NIGHT (OPENS AT 12:00 PM)";
+          statusSub = "Kitchen closed for the day. Re-opening at 12 PM.";
+        }
+      }
+
+      // Update Top Status Bar
+      const liveText = document.getElementById('live-status-text');
+      const liveDot = document.getElementById('live-status-dot');
+      if (liveText && liveDot) {
+        liveText.textContent = statusText;
+        if (isOpen) {
+          liveDot.className = "w-3.5 h-3.5 rounded-full border-2 border-pop-black bg-pop-lime animate-pulse";
+        } else {
+          liveDot.className = "w-3.5 h-3.5 rounded-full border-2 border-pop-black bg-pop-pink animate-pulse";
+        }
+      }
+
+      // Update Timings Widget Card
+      const matrixHeader = document.getElementById('matrix-status-header');
+      const matrixSub = document.getElementById('matrix-status-sub');
+      const matrixCard = document.getElementById('status-card-widget');
+      if (matrixHeader && matrixSub && matrixCard) {
+        matrixHeader.textContent = statusText;
+        matrixSub.textContent = statusSub;
+        if (isOpen) {
+          matrixCard.className = "p-4 rounded-2xl border-3 border-pop-black bg-pop-lime shadow-brutal flex flex-col sm:flex-row items-center justify-between gap-4";
+        } else {
+          matrixCard.className = "p-4 rounded-2xl border-3 border-pop-black bg-pop-butter shadow-brutal flex flex-col sm:flex-row items-center justify-between gap-4";
+        }
+      }
+    }
+
+    // --- TABLE BOOKING FORM SUBMISSION ---
+    function handleBookingSubmit(e) {
+      e.preventDefault();
+      const name = document.getElementById('book-name').value.trim();
+      const phone = document.getElementById('book-phone').value.trim();
+      const guests = document.getElementById('book-guests').value;
+      const craving = document.getElementById('book-craving').value;
+      const date = document.getElementById('book-date').value;
+      const time = document.getElementById('book-time').value;
+      const notes = document.getElementById('book-notes').value.trim();
+
+      if (!name || !phone || !date) {
+        alert("Please fill in your name, phone, and date!");
+        return;
+      }
+
+      let msg = `*TABLE BOOKING REQUEST - THE CAFETERIA*\n`;
+      msg += `📍 Shop No. 4, 128 Hazra Rd, Kolkata\n`;
+      msg += `--------------------------\n`;
+      msg += `👤 Guest Name: ${name}\n`;
+      msg += `📱 WhatsApp: ${phone}\n`;
+      msg += `👥 Group Size: ${guests}\n`;
+      msg += `📅 Date: ${date}\n`;
+      msg += `⏰ Time Slot: ${time}\n`;
+      msg += `🍕 Craving: ${craving}\n`;
+      if (notes) {
+        msg += `📝 Notes/Requests: ${notes}\n`;
+      }
+      msg += `--------------------------\n`;
+      msg += `Please confirm if table space is available! Thank you! 🎉`;
+
+      const waUrl = `https://wa.me/916289974613?text=${encodeURIComponent(msg)}`;
+      window.open(waUrl, '_blank');
+      showToast("🎉 Booking request formatted! Opening WhatsApp...");
+    }
+
+    // --- LIGHTBOX MODAL ---
+    function openLightbox(src, title, desc) {
+      const modal = document.getElementById('lightbox-modal');
+      const img = document.getElementById('lightbox-img');
+      const titleElem = document.getElementById('lightbox-title');
+      const descElem = document.getElementById('lightbox-desc');
+      const waLink = document.getElementById('lightbox-whatsapp');
+
+      if (!modal || !img) return;
+
+      img.src = src;
+      titleElem.textContent = title;
+      descElem.textContent = desc;
+
+      const waMsg = encodeURIComponent(`Hey The Cafeteria! I was checking your gallery photo "${title}" on your website. Tell me more about it!`);
+      waLink.href = `https://wa.me/916289974613?text=${waMsg}`;
+
+      modal.classList.remove('hidden');
+      document.body.style.overflow = 'hidden';
+    }
+
+    function closeLightbox() {
+      const modal = document.getElementById('lightbox-modal');
+      if (modal) {
+        modal.classList.add('hidden');
+        document.body.style.overflow = '';
+      }
+    }
+
+    // --- MOBILE NAV TOGGLE ---
+    function toggleMobileNav() {
+      const nav = document.getElementById('mobile-nav');
+      if (!nav) return;
+      nav.classList.toggle('hidden');
+    }
+
+    // --- TOAST NOTIFICATION ---
+    let toastTimeout;
+    function showToast(message) {
+      const toast = document.getElementById('toast');
+      const msgElem = document.getElementById('toast-message');
+      if (!toast || !msgElem) return;
+
+      msgElem.textContent = message;
+      toast.classList.remove('hidden');
+
+      clearTimeout(toastTimeout);
+      toastTimeout = setTimeout(() => {
+        toast.classList.add('hidden');
+      }, 3000);
+    }
+
+    // --- INITIALIZATION ---
+    document.addEventListener('DOMContentLoaded', () => {
+      // 1. Render initial menu
+      renderMenu();
+
+      // 2. Initialize Lucide icons
+      if (window.lucide) {
+        window.lucide.createIcons();
+      }
+
+      // 3. Set minimum booking date to today
+      const dateInput = document.getElementById('book-date');
+      if (dateInput) {
+        const today = new Date().toISOString().split('T')[0];
+        dateInput.min = today;
+        dateInput.value = today;
+      }
+
+      // 4. Update live cafe status and start interval
+      updateLiveStatus();
+      setInterval(updateLiveStatus, 30000); // Check every 30 seconds
+    });
+  </script>
+</body>
+</html>

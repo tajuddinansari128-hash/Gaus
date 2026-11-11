@@ -1,0 +1,6 @@
+{
+  "name": "The Cafeteria - Sips, Bites & Good Vibes",
+  "description": "Funky, vibrant retro-pop café and hangout website for The Cafeteria on Hazra Road, Bhowanipore, South Kolkata. Features food menu, WhatsApp ordering, table booking, live timings, and Google Maps directions.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
